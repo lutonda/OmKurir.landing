@@ -8,10 +8,11 @@ export default function Header() {
         <div className="row">
           <div className="col-lg-12">
             <nav className="navbar navbar-expand-lg">
-              <a className="navbar-brand" href="index.html">
+              <a className="navbar-brand" href="#">
                 <img
                   src="/assets/images/logo/logo_light.png"
                   alt="Logo"
+                  className="logo"
                   style={{ height: 60 }}
                 />
               </a>
@@ -59,9 +60,12 @@ export default function Header() {
                       Blog
                     </a>
                   </li>
+                  <li className="nav-item">
+                  <IdiomSelect/>
+                  </li>
                 </ul>
               </div>
-              <IdiomSelect/>
+              
             </nav>
           </div>
         </div>
