@@ -17,6 +17,7 @@ function Pages() {
       <Route path="/how" element={<How />} />
       <Route path="/auth" element={<Auth />} />
     </Routes>
+    
   );
 }
 

@@ -1,46 +1,71 @@
 import { Link } from "react-router-dom";
+import IdiomSelect from "./IdiomSelect";
 
-export default function Header(){
-    return (
-    
-    <div className="navbar-area">
-        <div className="container">
+export default function Header() {
+  return (
+    <div className="header_navbar">
+      <div className="container">
         <div className="row">
-            <div className="col-lg-12">
+          <div className="col-lg-12">
             <nav className="navbar navbar-expand-lg">
-                <Link className="navbar-brand" to="/">
-                <img src="/img/logo.png" alt="Logo"/>
-                </Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <a className="navbar-brand" href="index.html">
+                <img
+                  src="/assets/images/logo/logo_light.png"
+                  alt="Logo"
+                  style={{ height: 60 }}
+                />
+              </a>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
                 <span className="toggler-icon"></span>
                 <span className="toggler-icon"></span>
                 <span className="toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                <ul id="nav" className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <Link className="page-scroll" to="/">Home</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="page-scroll" to="/about">About</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="page-scroll" to="/api">Api</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="page-scroll" to="/how">How does it work?</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="page-scroll" to="/auth">Auth</Link>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-            </div>
-        </div>
-        </div>
-    </div>
+              </button>
 
-    )
+              <div
+                className="collapse navbar-collapse sub-menu-bar"
+                id="navbarSupportedContent"
+              >
+                <ul id="nav" className="navbar-nav ml-auto">
+                  <li className="nav-item active">
+                    <a className="page-scroll" href="#home">
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="page-scroll" href="#features">
+                      Feature
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="page-scroll" href="#about">
+                      About
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="page-scroll" href="#pricing">
+                      Pricing
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="page-scroll" href="#blog">
+                      Blog
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <IdiomSelect/>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
