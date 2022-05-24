@@ -9,7 +9,7 @@ import {
   Header,
   Preloader,
   Pricing,
-  Video,
+  Order,
   HowItWork
 } from "./Seccions/Index";
 
@@ -18,10 +18,11 @@ export default function Home() {
     <>
       <Preloader />
       <Header />
+      <Order />
       <Features />
       <About />
       <HowItWork />
-      <Pricing />
+      <Pricing/>
       <Download />
       <Blog />
       <Footer />

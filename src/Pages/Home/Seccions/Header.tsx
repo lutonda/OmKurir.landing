@@ -74,7 +74,7 @@ export default function Header() {
             data-wow-duration="1.3s"
             data-wow-delay="1.8s"
           >
-            <img src="/assets/images/header_app.png" alt="header App" />
+            <img src="/assets/images/header_app.png" alt="header App" style={{width:400}} />
             <img src="/assets/images/dots.svg" alt="dots" className="dots" />
           </div>
         </div>

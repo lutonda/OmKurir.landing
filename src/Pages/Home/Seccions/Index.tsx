@@ -12,7 +12,8 @@ import Preloader from "./Preloader";
 import Pricing from "./Pricing";
 import Video from "./Video";
 import HowItWork from "./HowItWork";
+import Order from "./Order";
 
 export {
-    About, Blog, Download, Features, Footer, Header, Preloader, Pricing, Video, HowItWork
+    About, Blog, Download, Features, Footer, Header, Preloader, Pricing, Video, HowItWork, Order
 }
