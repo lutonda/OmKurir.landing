@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 export default function About() {
   return (
     <section id="about" className="about_area pt-30 pb-80">
@@ -24,14 +26,15 @@ export default function About() {
               data-wow-delay="0.5s"
             >
               <div className="section_title">
-                <h4 className="title">Discover New Experience!</h4>
+                <h4 className="title">
+                  <FormattedMessage id="app.about.title" />
+                </h4>
                 <p>
-                Improve your business and get much more profitable offers by using OmKurir's business services.
-                Upgrade your personal account to OmKurir's business account to get many benefits and a pleasant experience from just sending goods.
+                  <FormattedMessage id="app.about.description" />
                 </p>
               </div>
               <a className="main-btn" href="#">
-                Discover
+                <FormattedMessage id="app.label.discoverMore" />
               </a>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 export default function Features() {
   return (
     <section id="features" className="features_area pt-35 pb-80">
@@ -13,10 +14,11 @@ export default function Features() {
                 <i className="lni lni-cart"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">Express</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.express.title" />
+                </h4>
                 <p>
-                  Delivery service within the city is suitable for personal
-                  shipments. Faster and agile
+                  <FormattedMessage id="app.service.express.description" />
                 </p>
               </div>
             </div>
@@ -31,11 +33,11 @@ export default function Features() {
                 <i className="lni lni-layers"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">Lite express</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.liteExpress.title" />
+                </h4>
                 <p>
-                  Delivery service within the city. Very suitable for your
-                  business, multi-drop support for up to 20 shipments at a time
-                  and can use CAC services.
+                  <FormattedMessage id="app.service.liteExpress.description" />
                 </p>
               </div>
             </div>
@@ -50,9 +52,11 @@ export default function Features() {
                 <i className="lni lni-calendar"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">Sameday</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.sameday.title" />
+                </h4>
                 <p>
-                  Delivery service between cities and districts one day to arrive.
+                  <FormattedMessage id="app.service.sameday.description" />
                 </p>
               </div>
             </div>
@@ -67,9 +71,11 @@ export default function Features() {
                 <i className="lni lni-exit-down"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">NextDay</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.nextDay.title" />
+                </h4>
                 <p>
-                  Delivery service between Kora and regencies estimated 1-3 days.
+                  <FormattedMessage id="app.service.nextDay.description" />
                 </p>
               </div>
             </div>
@@ -84,10 +90,11 @@ export default function Features() {
                 <i className="lni lni-delivery"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">Cargo</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.cargo.title" />
+                </h4>
                 <p>
-                  In-city delivery service using a car is suitable for large
-                  shipments.
+                  <FormattedMessage id="app.service.cargo.description" />
                 </p>
               </div>
             </div>
@@ -102,10 +109,11 @@ export default function Features() {
                 <i className="lni lni-car-alt"></i>
               </div>
               <div className="features_content">
-                <h4 className="features_title">Lite Cargo</h4>
+                <h4 className="features_title">
+                  <FormattedMessage id="app.service.liteCargo.title" />
+                </h4>
                 <p>
-                  nter-city/district delivery service using cars with various
-                  types of fleets.
+                  <FormattedMessage id="app.service.liteCargo.description" />
                 </p>
               </div>
             </div>

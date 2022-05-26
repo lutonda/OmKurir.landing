@@ -1,7 +1,51 @@
 {
-    "app.header" : "Edit<code>{fileName}</code> js and save to reload" ,
-    "app.content" : "Learn React" ,
-    "app.channel.plug": "Tutorial brought to you by {blogName}",
-    "app.plural": "{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}",
-    "app.menu.home":"Awal"
-  }
+  "app.header": "Edit<code>{fileName}</code> js and save to reload",
+  "app.content": "Learn React",
+  "app.channel.plug": "Tutorial brought to you by {blogName}",
+  "app.plural": "{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}",
+  "app.menu.home": "Awal",
+  "app.menu.features": "Fitur",
+  "app.menu.about": "Tentang",
+  "app.menu.pricing": "Harga",
+  "app.menu.blog": "Blog",
+
+  "app.header.title": "{appName} adalah layanan logistik untuk perdagangan sosial",
+  "app.header.description": "Kami memberikan kemudahan bagi pengguna untuk mengirim barang menggunakan metode pembayaran cash-on-delivery (COD) & cash-and-carry (CAC) tanpa marketplace",
+
+  "app.order.title": "Hitung biaya Pengiriman Anda",
+  "app.order.description": "Jasa pengiriman dalam kota cocok untuk personalship. Lebih cepat dan gesit",
+  "app.order.check": "Cek ongkos kirim",
+
+  "app.track.title": "Melacak pengiriman",
+  "app.track.description": "Layanan pengiriman dalam kota cocok untuk pengiriman pribadi. Lebih cepat dan gesit",
+
+  "app.label.sid_code": "SID KODE:",
+  "app.label.discoverMore": "Temukan lebih banyak",
+  "app.label.download": "Unduh",
+  "app.label.downloadNow": "Unduh sekarang",
+  "app.label.enterManil": "Masukkan Email...",
+  "app.label.subscribe": "Berlangganan",
+
+  "app.service.express.title": "Ekspres",
+  "app.service.express.description": "Layanan pengiriman dalam kota cocok untuk pengiriman pribadi. Lebih cepat dan gesit",
+  "app.service.liteExpress.title": "Lite express",
+  "app.service.liteExpress.description": "Layanan pengiriman dalam kota. Sangat cocok untuk bisnis Anda, dukungan multi-drop hingga 20 pengiriman sekaligus dan dapat menggunakan layanan CAC.",
+  "app.service.sameday.title": "Sameday",
+  "app.service.sameday.description": "Layanan pengiriman antar kota dan kabupaten suatu hari akan tiba.",
+  "app.service.nextDay.title": "Hari Berikutnya",
+  "app.service.nextDay.description": "Layanan pengiriman antara Kora dan kabupaten diperkirakan 1-3 hari.",
+  "app.service.cargo.title": "Kargo",
+  "app.service.cargo.description": "Layanan pengiriman dalam kota menggunakan mobil cocok untuk pengiriman besar.",
+  "app.service.liteCargo.title": "Lite Cargo",
+  "app.service.liteCargo.description": "jasa pengiriman antar kota/kabupaten menggunakan mobil dengan berbagai jenis armada.",
+  "app.about.title": "Temukan Pengalaman Baru!",
+  "app.about.description": "Tingkatkan bisnis Anda dan dapatkan penawaran yang jauh lebih menguntungkan dengan menggunakan layanan bisnis OmKurir. Tingkatkan akun pribadi Anda ke akun bisnis OmKurir untuk mendapatkan banyak manfaat dan pengalaman menyenangkan hanya dengan mengirim barang.",
+
+  "app.download.description": "perdagangan sosial. yang menjual produk tersebut di media sosial.",
+
+  "app.blog.title": "Pembaruan terbaru kami",
+  "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.",
+  
+  "app.subscribe.title": "Berlangganan buletin kami",
+  "app.subscribe.description": "Bergabunglah dengan ribuan pengguna yang percaya bahwa ini adalah satu-satunya aplikasi."
+}

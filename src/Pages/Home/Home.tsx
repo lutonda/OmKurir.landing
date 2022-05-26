@@ -9,7 +9,8 @@ import {
   Header,
   Preloader,
   Order,
-  HowItWork
+  HowItWork,
+  Subscribe
 } from "./Seccions/Index";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <HowItWork />
       <Download />
       <Blog />
+      <Subscribe />
       <Footer />
     </>
   );

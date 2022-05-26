@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 export default function Blog() {
   return (
     <section id="blog" className="blog_area pt-80 pb-80">
@@ -5,10 +7,9 @@ export default function Blog() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section_title text-center pb-25">
-              <h4 className="title">From The Blog</h4>
+              <h4 className="title"><FormattedMessage id="app.blog.title" /></h4>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam
-                nonumy eirmod tempor invidunt ut labore et dolore.
+              <FormattedMessage id="app.blog.description" />
               </p>
             </div>
           </div>

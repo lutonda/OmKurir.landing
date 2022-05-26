@@ -1,19 +1,20 @@
+import { FormattedMessage } from "react-intl";
 
-export default function Footer(){
+export default function Subscribe(){
     return(
 
-            <section id="footer" className="pt-75 pb-80">
+            <section id="footer" className="footer_area pt-75 pb-80">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-7">
                                 <div className="footer_subscribe text-center">
-                                    <h3 className="subscribe_title">Subscribe our newsletter</h3>
-                                    <p>Join thousands of users who believe this is the one app.</p>
+                                    <h3 className="subscribe_title"><FormattedMessage id="app.subscribe.title" /></h3>
+                                    <p><FormattedMessage id="app.subscribe.description" /></p>
 
                                     <div className="subscribe_form">
                                         <form action="#">
                                             <input type="text" placeholder="Enter Email..."/>
-                                            <button className="main-btn">Subscribe</button>
+                                            <button className="main-btn"><FormattedMessage id="app.label.subscribe" /></button>
                                         </form>
                                     </div> 
                                 </div> 

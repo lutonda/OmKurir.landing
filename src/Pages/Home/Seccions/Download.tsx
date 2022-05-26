@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 export default function Download() {
   return (
     <section id="download" className="download_app_area pt-80 mb-80">
@@ -10,9 +11,9 @@ export default function Download() {
             <img src="/assets/images/shape-6.png" alt="shape" />
           </div>
           <div className="download_app_content">
-            <h3 className="download_title">Download The App</h3>
+            <h3 className="download_title"><FormattedMessage id="app.label.download" /></h3>
             <p>
-            Social commerce. who selling those product on social media.
+            <FormattedMessage id="app.download.description" />
             </p>
             <ul>
               <li>
@@ -22,7 +23,7 @@ export default function Download() {
                   </span>
                   <span className="content media-body">
                     <h6 className="title">Play Store</h6>
-                    <p>Download Now</p>
+                    <p><FormattedMessage id="app.label.downloadNow" /></p>
                   </span>
                 </a>
               </li>
@@ -33,7 +34,7 @@ export default function Download() {
                   </span>
                   <span className="content">
                     <h6 className="title">App Store</h6>
-                    <p>Download Now</p>
+                    <p><FormattedMessage id="app.label.downloadNow" /></p>
                   </span>
                 </a>
               </li>

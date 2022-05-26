@@ -1,4 +1,5 @@
 import "./Order.scss";
+import { FormattedMessage } from "react-intl";
 
 export default function Order() {
   return (
@@ -14,11 +15,10 @@ export default function Order() {
               >
                 <div className="features_content">
                   <h4 className="features_title text-left">
-                    Calculate your Shipping costs
+                    <FormattedMessage id="app.order.title" />
                   </h4>
                   <p className="text-left">
-                    Delivery service within the city is suitable for personal
-                    shipments. Faster and agile
+                    <FormattedMessage id="app.order.description" />
                   </p>
                   <div className="row" style={{ marginTop: 15 }}>
                     <div className="col-md-4">
@@ -46,7 +46,7 @@ export default function Order() {
                         type="button"
                         style={{ width: "100%" }}
                       >
-                        Check Postage
+                        <FormattedMessage id="app.order.check" />
                       </button>
                     </div>
                   </div>
@@ -60,12 +60,15 @@ export default function Order() {
                 data-wow-delay="0.2s"
               >
                 <div className="features_content">
-                  <h4 className="features_title text-left">Track Delivery</h4>
+                  <h4 className="features_title text-left">
+                    <FormattedMessage id="app.track.title" />
+                  </h4>
                   <p className="text-left">
-                    Delivery service within the city is suitable for personal
-                    shipments. Faster and agile
+                    <FormattedMessage id="app.track.description" />
                   </p>
-                  <span>SID CODE: </span>
+                  <span>
+                    <FormattedMessage id="app.label.sid_code" />:
+                  </span>
                   <textarea
                     id="awb-text-area"
                     className="form-control airwaybill-code pt-0"

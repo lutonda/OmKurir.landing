@@ -1,5 +1,5 @@
 import Head from "../../../Component/Header";
-
+import { FormattedMessage } from "react-intl";
 export default function Header() {
   return (
     <section className="header_area">
@@ -31,16 +31,17 @@ export default function Header() {
                   data-wow-duration="1.3s"
                   data-wow-delay="0.2s"
                 >
-                  OmKurir is a logistics service for social commerce
+                  <FormattedMessage
+                    id="app.header.title"
+                    values={{ appName: "OmKurir" }}
+                  />
                 </h2>
                 <p
                   className="wow fadeInLeftBig"
                   data-wow-duration="1.3s"
                   data-wow-delay="0.6s"
                 >
-                  We make easy for users to send goods using the
-                  cash-on-delivery (COD) & cash-and-carry (CAC) pay method
-                  without a marketplace
+                  <FormattedMessage id="app.header.description" />
                 </p>
                 <ul>
                   <li>
@@ -50,7 +51,7 @@ export default function Header() {
                       data-wow-delay="1s"
                       href="#"
                     >
-                      Discover More
+                      <FormattedMessage id="app.label.discoverMore" />
                     </a>
                   </li>
                   <li>
@@ -60,7 +61,7 @@ export default function Header() {
                       data-wow-delay="1.4s"
                       href="#download"
                     >
-                      Download App
+                      <FormattedMessage id="app.label.download" />
                     </a>
                   </li>
                 </ul>
@@ -74,7 +75,11 @@ export default function Header() {
             data-wow-duration="1.3s"
             data-wow-delay="1.8s"
           >
-            <img src="/assets/images/header_app.png" alt="header App" style={{width:400}} />
+            <img
+              src="/assets/images/header_app.png"
+              alt="header App"
+              style={{ width: 400 }}
+            />
             <img src="/assets/images/dots.svg" alt="dots" className="dots" />
           </div>
         </div>

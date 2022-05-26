@@ -1,7 +1,3 @@
-
-
-
-
 import About from "./About";
 import Blog from "./Blog";
 import Download from "./Download";
@@ -13,7 +9,18 @@ import Pricing from "./Pricing";
 import Video from "./Video";
 import HowItWork from "./HowItWork";
 import Order from "./Order";
-
+import Subscribe from "./Subscribe";
 export {
-    About, Blog, Download, Features, Footer, Header, Preloader, Pricing, Video, HowItWork, Order
-}
+  About,
+  Blog,
+  Download,
+  Features,
+  Footer,
+  Header,
+  Preloader,
+  Pricing,
+  Video,
+  HowItWork,
+  Order,
+  Subscribe,
+};
