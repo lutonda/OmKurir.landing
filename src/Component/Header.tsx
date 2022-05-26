@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import IdiomSelect from "./IdiomSelect";
 
+import { FormattedMessage } from "react-intl";
+
 export default function Header() {
   return (
     <div className="header_navbar">
@@ -37,7 +39,10 @@ export default function Header() {
                 <ul id="nav" className="navbar-nav ml-auto">
                   <li className="nav-item active">
                     <a className="page-scroll" href="#home">
-                      Home
+                      
+                      <FormattedMessage
+                        id="app.menu.home"
+                      />
                     </a>
                   </li>
                   <li className="nav-item">
@@ -61,11 +66,10 @@ export default function Header() {
                     </a>
                   </li>
                   <li className="nav-item">
-                  <IdiomSelect/>
+                    <IdiomSelect />
                   </li>
                 </ul>
               </div>
-              
             </nav>
           </div>
         </div>

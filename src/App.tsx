@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 //import logo from './logo.svg';
 import "./App.css";
 import Pages from "./Pages/Pages";
-import Header from "./Component/Header";
 import { BrowserRouter, Link } from "react-router-dom";
 
-function App() {
+import Wrapper,{Context} from "./Component/Wrapper";
+
+function App(props:any) {
+ const context = useContext(Context);
   return (
     <BrowserRouter>
       <Pages />
