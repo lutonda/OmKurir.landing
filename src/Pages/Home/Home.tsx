@@ -8,7 +8,6 @@ import {
   Footer,
   Header,
   Preloader,
-  Pricing,
   Order,
   HowItWork
 } from "./Seccions/Index";
@@ -22,7 +21,6 @@ export default function Home() {
       <Features />
       <About />
       <HowItWork />
-      <Pricing/>
       <Download />
       <Blog />
       <Footer />
