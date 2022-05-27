@@ -16,7 +16,9 @@ import {
 export default function Home() {
   return (
     <>
+    {/*
       <Preloader />
+  */}
       <Header />
       <Order />
       <Features />

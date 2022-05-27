@@ -1,0 +1,20 @@
+.Footer {
+  .dark {
+    background: #441e9e;
+  }
+  .darker {
+    background: #1e0f60;
+  }
+
+  * {
+    color: rgb(214, 220, 255) !important;
+  }
+  section.section-primary{
+      padding: 60px 0;
+  }
+  section.section-legal{
+      .col-12.text-center{
+        *{margin: 5px 15px;}
+      }
+  }
+}

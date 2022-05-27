@@ -33,6 +33,22 @@ export default function About() {
                   <FormattedMessage id="app.about.description" />
                 </p>
               </div>
+              <div className="row">
+                <div className="col-md-4">
+                  Curated Delivery Expert delivery. Off-the-charts customer
+                  service. Choose the delivery solution that’s right for your
+                  business.
+                </div>
+                <div className="col-md-4">
+                  Responsive Support You and your customers get text updates
+                  every step of the way. And, you can always talk to a real
+                  person.
+                </div>
+                <div className="col-md-4">
+                  Guarantee Rates No upcharges. No surprises. Just one
+                  reasonable fixed rate.
+                </div>
+              </div>
               <a className="main-btn" href="#">
                 <FormattedMessage id="app.label.discoverMore" />
               </a>

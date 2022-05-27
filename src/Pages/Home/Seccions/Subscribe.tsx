@@ -26,9 +26,6 @@ export default function Subscribe(){
                                         <li><a href="https://www.linkedin.com/company/omkuririndonesia/about/" target={"_blank"}><span className="lni lni-linkedin-original"></span></a></li>
                                     </ul>
                                 </div>
-                                <div className="footer_copyright text-center mt-55">
-                                    <p>Copyright &copy; 2022. Designed and Developed by <a href="#" rel="nofollow">-Omkurir</a></p>
-                                </div>
                             </div>
                         </div>
                     </div> 
