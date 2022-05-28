@@ -7,13 +7,18 @@ import About from './Home/About';
 import Api from './Home/Api';
 import Auth from './Home/Auth';
 import How from './Home/How';
+import Partners from './Partners/Partners';
+import BecomePartner from './Partners/BecomePartner';
+import AboutUs from './AboutUs/AboutUs';
 
 function Pages() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/api" element={<Api />} />
+      <Route path="/partners" element={<Partners />} />
+      <Route path="/partners/become" element={<BecomePartner />} />
+
+      <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/how" element={<How />} />
       <Route path="/auth" element={<Auth />} />
     </Routes>

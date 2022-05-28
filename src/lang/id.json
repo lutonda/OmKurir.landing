@@ -6,8 +6,9 @@
   "app.menu.home": "Awal",
   "app.menu.features": "Fitur",
   "app.menu.about": "Tentang",
-  "app.menu.pricing": "Harga",
+  "app.menu.discover": "Menemukan",
   "app.menu.blog": "Blog",
+  "app.label.becomePartener": "Menjadi Mitra bisnis",
 
   "app.header.title": "{appName} adalah layanan logistik untuk bisnis Anda",
   "app.header.description": "Kami memberikan kemudahan bagi pengguna untuk mengirim barang menggunakan metode pembayaran cash-on-delivery (COD) & cash-and-carry (CAC) tanpa marketplace",
@@ -38,14 +39,33 @@
   "app.service.cargo.description": "Layanan pengiriman dalam kota menggunakan mobil cocok untuk pengiriman besar.",
   "app.service.liteCargo.title": "Lite Cargo",
   "app.service.liteCargo.description": "jasa pengiriman antar kota/kabupaten menggunakan mobil dengan berbagai jenis armada.",
+
   "app.about.title": "Temukan Pengalaman Baru!",
   "app.about.description": "Tingkatkan bisnis Anda dan dapatkan penawaran yang jauh lebih menguntungkan dengan menggunakan layanan bisnis OmKurir. Tingkatkan akun pribadi Anda ke akun bisnis OmKurir untuk mendapatkan banyak manfaat dan pengalaman menyenangkan hanya dengan mengirim barang.",
+  "app.about.0": "Pengiriman Pakar Pengiriman Terkurasi. Layanan pelanggan yang luar biasa. Pilih solusi pengiriman yang tepat untuk bisnis Anda.",
+  "app.about.1": "Dukungan Responsif Anda dan pelanggan Anda mendapatkan pembaruan teks di setiap langkah. Dan, Anda selalu dapat berbicara dengan orang sungguhan.",
+  "app.about.2": "Tarif Jaminan Tidak ada biaya tambahan. Tidak ada kejutan. Hanya satu tarif tetap yang wajar.",
+
+  "app.footer.aboutUs": "Tentang OmKurir",
+  "app.aboutus.text.0": "OmKurir menawarkan talenta Pengiriman Pro yang sepenuhnya diperiksa dengan teknologi point-to-point terbaru. Semua untuk pengiriman terkurasi yang andal dari register Anda ke ruang pelanggan. Layanan ahli kami menawarkan ritel bisnis, pengalaman pengiriman hari yang sama tanpa batas yang meningkatkan transaksi tiket besar Anda dan memenuhi standar tinggi pelanggan Anda.",
+  "app.aboutus.text.1": "Kami melihat bahwa pertumbuhan social commerce (toko online di media sosial) sangat signifikan dibandingkan dengan pengguna e-commerce marketplace di Indonesia. Bahkan sebagian besar penjual e commerce tersebut dimulai dengan perdagangan sosial.",
+  "app.aboutus.text.2": "Saat ini, media sosial tidak lagi hanya sebagai platform bersosialisasi, tetapi telah berubah menjadi platform jual beli. Untuk menghubungkan pembeli dan penjual, layanan pengiriman yang tersedia saat ini selain mahal, juga tidak menyediakan fitur cash on delivery kecuali untuk pengguna marketplace.",
+
+  "app.howItWork.title": "Temukan Pengalaman Baru!",
+  "app.howItWork.0": "Lebih cepat tiba",
+  "app.howItWork.1": "Mendukung pembayaran COD & CAC",
+  "app.howItWork.2": "Maks 5kg untuk pengiriman Sameday & NextDay.",
+  "app.howItWork.3": "Pencairan COD 24/7.",
+  "app.howItWork.4": "Tidak ada pesanan minimum.",
+  "app.howItWork.5": "Layanan super lengkap mulai dari pengiriman kecil & besar, pengiriman kota, domestik hingga internasional.",
+  "app.howItWork.6": "Pengembalian minimal.",
+  "app.howItWork.7": "Mendukung sepenuhnya kebutuhan bisnis Anda.",
 
   "app.download.description": "perdagangan sosial. yang menjual produk tersebut di media sosial.",
 
   "app.blog.title": "Pembaruan terbaru kami",
   "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.",
-  
+
   "app.subscribe.title": "Berlangganan buletin kami",
   "app.subscribe.description": "Bergabunglah dengan ribuan pengguna yang percaya bahwa ini adalah satu-satunya aplikasi."
 }

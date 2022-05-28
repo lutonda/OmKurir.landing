@@ -6,7 +6,7 @@
   "app.menu.home": "開始",
   "app.menu.features": "特徵",
   "app.menu.about": "關於",
-  "app.menu.pricing": "價錢",
+  "app.menu.discover": "發現",
   "app.menu.blog": "博客",
 
   "app.header.title": "{appName} 是為您的企業提供的物流服務",
@@ -25,6 +25,7 @@
   "app.label.downloadNow": "現在下載",
   "app.label.enterManil": "輸入郵箱...",
   "app.label.subscribe": "訂閱",
+  "app.label.becomePartener": "成為商業夥伴",
 
   "app.service.express.title": "快遞",
   "app.service.express.description": "城內派送服務適合個人寄件。更快更敏捷",
@@ -38,14 +39,33 @@
   "app.service.cargo.description": "市內專車派送服務適合大件貨件。",
   "app.service.liteCargo.title": "Lite Cargo",
   "app.service.liteCargo.description": "使用不同類型車隊的汽車的城際/地區送貨服務。",
+
   "app.about.title": "發現新體驗！",
-   "app.about.description": "通過使用 OmKurir 的商業服務改善您的業務並獲得更多有利可圖的優惠。將您的個人帳戶升級為 OmKurir 的商業帳戶，從僅僅發送貨物中獲得許多好處和愉快的體驗。",
-   
-   "app.download.description": "社交商務。 誰在社交媒體上銷售這些產品。",
+  "app.about.description": "通過使用 OmKurir 的商業服務改善您的業務並獲得更多有利可圖的優惠。將您的個人帳戶升級為 OmKurir 的商業帳戶，從僅僅發送貨物中獲得許多好處和愉快的體驗。",
+  "app.about.0": "策劃的交付專家交付。不受歡迎的客戶服務。選擇適合您業務的交付解決方案。",
+  "app.about.1": "響應式支持您和您的客戶在每一步都會收到文本更新。而且，您始終可以與真人交談。",
+  "app.about.2": "保證費率沒有附加費。沒有驚喜。只有一個合理的固定費率。",
 
-   "app.blog.title": "我們的最新更新",
-   "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam noumy eirmod tempor invidunt ut labore et dolore。",
+  "app.footer.aboutUs": "關於 OmKurir",
+  "app.aboutus.text.0": "OmKurir 為經過全面審查的交付專業人士提供最新的點對點技術。所有這些都是為了從您的收銀機到客戶房間的可靠策劃交付。我們的專家服務提供零售 企業，無縫的當日交付體驗，增加您的大宗交易並滿足您客戶的高標準。",
+  "app.aboutus.text.1": "我們看到，與印度尼西亞的電子商務市場用戶相比，社交商務（社交媒體上的在線商店）的增長非常顯著。即使大多數電子商務賣家都是從一個 社交商務。",
+  "app.aboutus.text.2": "目前，社交媒體不再只是一個社交平台，而是變成了一個買賣平台。為了連接買家和賣家，目前可用的送貨服務，除了價格昂貴， 除市場用戶外，也不提供貨到付款功能。",
 
-   "app.subscribe.title": "訂閱我們的時事通訊",
-   "app.subscribe.description": "加入成千上萬相信這是一款應用的用戶。"
+  "app.howItWork.title": "發現新體驗！",
+  "app.howItWork.0": "更快到達",
+  "app.howItWork.1": "支持 COD & CAC 支付",
+  "app.howItWork.2": "當日和次日發貨最多 5 公斤。",
+  "app.howItWork.3": "24/7 COD 支付。",
+  "app.howItWork.4": "沒有最低訂單。",
+  "app.howItWork.5": "從小件到大件、同城發貨、國內到國際的超完善服務。",
+  "app.howItWork.6": "最低迴報。",
+  "app.howItWork.7": "全面支持您的業務需求。",
+
+  "app.download.description": "社交商務。 誰在社交媒體上銷售這些產品。",
+
+  "app.blog.title": "我們的最新更新",
+  "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam noumy eirmod tempor invidunt ut labore et dolore。",
+
+  "app.subscribe.title": "訂閱我們的時事通訊",
+  "app.subscribe.description": "加入成千上萬相信這是一款應用的用戶。"
 }

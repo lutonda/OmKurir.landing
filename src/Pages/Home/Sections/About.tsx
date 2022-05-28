@@ -1,4 +1,5 @@
 import { FormattedMessage } from "react-intl";
+import "./About.scss";
 
 export default function About() {
   return (
@@ -33,20 +34,14 @@ export default function About() {
                   <FormattedMessage id="app.about.description" />
                 </p>
               </div>
-              <div className="row">
-                <div className="col-md-4">
-                  Curated Delivery Expert delivery. Off-the-charts customer
-                  service. Choose the delivery solution that’s right for your
-                  business.
+              <div className="row single_features mt-30 features_3 text-center wow fadeInUp">
+                <div className="col-md-6">
+                  <i className="lni lni-ship"></i>
+                  <FormattedMessage id="app.about.1" />
                 </div>
-                <div className="col-md-4">
-                  Responsive Support You and your customers get text updates
-                  every step of the way. And, you can always talk to a real
-                  person.
-                </div>
-                <div className="col-md-4">
-                  Guarantee Rates No upcharges. No surprises. Just one
-                  reasonable fixed rate.
+                <div className="col-md-6">
+                  <i className="lni lni-money-protection"></i>
+                  <FormattedMessage id="app.about.2" />
                 </div>
               </div>
               <a className="main-btn" href="#">

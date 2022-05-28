@@ -1,6 +1,6 @@
-import Head from "../../../Component/Header";
+import Head from "./Head";
 import { FormattedMessage } from "react-intl";
-export default function Header() {
+const HomeHeader = () => {
   return (
     <section className="header_area">
       <Head />
@@ -49,7 +49,7 @@ export default function Header() {
                       className="main-btn wow fadeInUp"
                       data-wow-duration="1.3s"
                       data-wow-delay="1s"
-                      href="#"
+                      href="#features"
                     >
                       <FormattedMessage id="app.label.discoverMore" />
                     </a>
@@ -86,4 +86,57 @@ export default function Header() {
       </div>
     </section>
   );
-}
+};
+
+const MainHeader = ({
+  title,
+  subTitle = "",
+  Addon = () => <></>,
+}: {
+  title: string;
+  subTitle: string;
+  Addon?: any;
+}) => {
+  return (
+    <section className="header_area MainHeader">
+      <Head />
+
+      <div id="home" className="header_hero d-lg-flex align-items-center">
+        <img
+          className="shape shape-1"
+          src="/assets/images/shape-1.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-2"
+          src="/assets/images/shape-2.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-3"
+          src="/assets/images/shape-3.svg"
+          alt="shape"
+        />
+
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="header_hero_content mt-45">
+                <h1>
+                  <FormattedMessage id={title} />
+                </h1>
+              </div>
+              <span style={{ color: "#FFF" }}>
+                <FormattedMessage id={subTitle} />
+              </span>
+              <hr />
+              <Addon />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export { HomeHeader, MainHeader };

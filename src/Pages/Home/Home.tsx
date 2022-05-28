@@ -5,18 +5,16 @@ import {
   Blog,
   Download,
   Features,
-  Footer,
-  Header,
-  Preloader,
   Order,
   HowItWork,
-  Subscribe
-} from "./Seccions/Index";
+} from "./Sections/Index";
+
+import { Preloader, Footer, Subscribe, HomeHeader as Header } from "../Component/index";
 
 export default function Home() {
   return (
     <>
-    {/*
+      {/*
       <Preloader />
   */}
       <Header />

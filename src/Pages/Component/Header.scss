@@ -1,0 +1,41 @@
+.header_navbar:not(.sticky) {
+  .dropdown-menu {
+    background: #6429bc;
+    * {
+      color: #fff !important;
+    }
+  }
+}
+
+.MainHeader::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+
+  background-position: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.MainHeader {
+  .header_hero {
+    height: 500px !important;
+    background-position: center !important;
+    .container{
+      h1{
+        color: #FFFF;
+      }
+    }
+  }
+  .header_hero::before {
+    height: 400px !important;
+    background-position: top !important;
+  }
+  .shape.shape-2 {
+    bottom: auto !important;
+    left: calc((100% - 1700px) / 2);
+  }
+  
+}

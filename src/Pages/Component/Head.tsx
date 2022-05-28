@@ -1,22 +1,23 @@
-import IdiomSelect from "./IdiomSelect";
+import IdiomSelect from "../../Component/IdiomSelect";
 import "./Header.scss";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Head() {
   return (
     <div className="header_navbar">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <nav className="navbar navbar-expand-lg">
-              <a className="navbar-brand" href="#">
+              <Link to="/" className="navbar-brand">
                 <img
                   src="/assets/images/logo/logo_light.png"
                   alt="Logo"
                   className="logo"
                   style={{ height: 60 }}
                 />
-              </a>
+              </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -38,37 +39,27 @@ export default function Header() {
                 <ul id="nav" className="navbar-nav ml-auto">
                   <li className="nav-item active">
                     <a className="page-scroll" href="#home">
-                      <FormattedMessage
-                        id="app.menu.home"
-                      />
+                      <FormattedMessage id="app.menu.home" />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="page-scroll" href="#features">
-                    <FormattedMessage
-                        id="app.menu.features"
-                      />
+                      <FormattedMessage id="app.menu.features" />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="page-scroll" href="#about">
-                    <FormattedMessage
-                        id="app.menu.about"
-                      />
+                      <FormattedMessage id="app.menu.about" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="page-scroll" href="#pricing">
-                    <FormattedMessage
-                        id="app.menu.pricing"
-                      />
+                    <a className="page-scroll" href="#howItWork">
+                      <FormattedMessage id="app.menu.discover" />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="page-scroll" href="#blog">
-                    <FormattedMessage
-                        id="app.menu.blog"
-                      />
+                      <FormattedMessage id="app.menu.blog" />
                     </a>
                   </li>
                   <li className="nav-item">

@@ -1,7 +1,8 @@
 import { FormattedMessage } from "react-intl";
+import "./Features.scss"
 export default function Features() {
   return (
-    <section id="features" className="features_area pt-35 pb-80">
+    <section id="features" className="features_area pt-35 pb-80 Features">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-4 col-md-7 col-sm-8">
@@ -11,7 +12,7 @@ export default function Features() {
               data-wow-delay="0.2s"
             >
               <div className="features_icon">
-                <i className="lni lni-cart"></i>
+              <img src={"/assets/icons/app/express.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
@@ -30,7 +31,7 @@ export default function Features() {
               data-wow-delay="0.5s"
             >
               <div className="features_icon">
-                <i className="lni lni-layers"></i>
+                <img src={"/assets/icons/app/lite-express.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
@@ -49,7 +50,7 @@ export default function Features() {
               data-wow-delay="0.9s"
             >
               <div className="features_icon">
-                <i className="lni lni-calendar"></i>
+              <img src={"/assets/icons/app/same-day.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
@@ -68,7 +69,7 @@ export default function Features() {
               data-wow-delay="0.9s"
             >
               <div className="features_icon">
-                <i className="lni lni-exit-down"></i>
+              <img src={"/assets/icons/app/next-day.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
@@ -87,7 +88,7 @@ export default function Features() {
               data-wow-delay="0.9s"
             >
               <div className="features_icon">
-                <i className="lni lni-delivery"></i>
+              <img src={"/assets/icons/app/cargo.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
@@ -106,7 +107,7 @@ export default function Features() {
               data-wow-delay="0.9s"
             >
               <div className="features_icon">
-                <i className="lni lni-car-alt"></i>
+              <img src={"/assets/icons/app/lite-cargo.png"} className="app-icon"/>
               </div>
               <div className="features_content">
                 <h4 className="features_title">
