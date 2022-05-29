@@ -10,6 +10,7 @@ import How from './Home/How';
 import Partners from './Partners/Partners';
 import BecomePartner from './Partners/BecomePartner';
 import AboutUs from './AboutUs/AboutUs';
+import ConactUs from './ContactUs/ContactUs';
 
 function Pages() {
   return (
@@ -19,6 +20,8 @@ function Pages() {
       <Route path="/partners/become" element={<BecomePartner />} />
 
       <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/contactus" element={<ConactUs />} />
+      
       <Route path="/how" element={<How />} />
       <Route path="/auth" element={<Auth />} />
     </Routes>
