@@ -36,7 +36,10 @@ body {
 img {
   max-width: 100%;
 }
-
+input, textarea, select{
+  background-color: #f4f4f4 !important;
+  border: none !important;
+}
 a:focus,
 input:focus,
 textarea:focus,

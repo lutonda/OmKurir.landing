@@ -21,10 +21,10 @@
 }
 .MainHeader {
   .header_hero {
-    height: 500px !important;
+    max-height: 400px !important;
     background-position: center !important;
     .container{
-      h1{
+      h1, h3, h4{
         color: #FFFF;
       }
     }

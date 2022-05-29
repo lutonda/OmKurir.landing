@@ -63,6 +63,22 @@ export default function Head() {
                     </a>
                   </li>
                   <li className="nav-item">
+                    <Link
+                      className="main-btn wow fadeInUp"
+                      data-wow-duration="1.3s"
+                      data-wow-delay="1s"
+                      to="/auth"
+                      style={{
+                        padding: " 0 25px",
+                        height: " 35px",
+                        lineHeight: "35px",
+                      }}
+                    >
+                      Join the family
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
                     <IdiomSelect />
                   </li>
                 </ul>

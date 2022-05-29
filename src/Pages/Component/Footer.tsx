@@ -123,7 +123,7 @@ export default function Footer() {
                         id="menu-item-6036"
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-6036"
                       >
-                        <Link className="page-scroll" to="#"><i className="lni lni-lock-alt"></i> Careers</Link>
+                        <Link className="page-scroll" to="/careers">Careers</Link>
                       </li>
                     </ul>
                   </nav>

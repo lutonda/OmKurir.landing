@@ -89,10 +89,12 @@ const HomeHeader = () => {
 };
 
 const MainHeader = ({
+  preTitle = null,
   title,
   subTitle = "",
   Addon = () => <></>,
 }: {
+  preTitle?: string|null;
   title: string;
   subTitle: string;
   Addon?: any;
@@ -122,6 +124,9 @@ const MainHeader = ({
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="header_hero_content mt-45">
+                <h4>{preTitle ? <FormattedMessage id={preTitle} /> : ""}
+                  
+                </h4>
                 <h1>
                   <FormattedMessage id={title} />
                 </h1>

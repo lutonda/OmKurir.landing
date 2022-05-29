@@ -11,6 +11,10 @@ import Partners from './Partners/Partners';
 import BecomePartner from './Partners/BecomePartner';
 import AboutUs from './AboutUs/AboutUs';
 import ConactUs from './ContactUs/ContactUs';
+import Careers from './Careers/Careers';
+import JobDetails from './Careers/JobDetails';
+import SingIn from './Auth/SignIn/SignIn';
+import SingOn from './Auth/SignOn/SignOn';
 
 function Pages() {
   return (
@@ -21,8 +25,14 @@ function Pages() {
 
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/contactus" element={<ConactUs />} />
-      
+
+      <Route path="/careers" element={<Careers />} />
+      <Route path="/careers/jobdetails/:id" element={<JobDetails />} />
+
+      <Route path="/auth" element={<SingIn />} />
+      <Route path="/auth/join" element={<SingOn />} />
       <Route path="/how" element={<How />} />
+
       <Route path="/auth" element={<Auth />} />
     </Routes>
     

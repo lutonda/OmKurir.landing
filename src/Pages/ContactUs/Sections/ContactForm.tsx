@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import { Form, Row, Button, Col, Container } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";
 
 function ContactForm() {
   return (
@@ -112,10 +113,8 @@ function ContactForm() {
 
           <div className="title-wrapper">
             <div className="title" style={{ textAlign: "left" }}>
-              <h2>Business Partners submition form</h2>
-              Contact us today to get your customers’ purchases from your
-              business to their home with same day and scheduled delivery. Want
-              to deliver for PICKUP? Sign Up Now
+              <h2><FormattedMessage id={"app.contactUs.form"} /></h2>
+              <FormattedMessage id={"app.contactUs.formdescription"} />
             </div>
 
             <div className="subtitle"></div>
