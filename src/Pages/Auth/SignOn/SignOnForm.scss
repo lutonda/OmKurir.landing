@@ -1,0 +1,18 @@
+#singOnForm {
+  #registationType {
+    .selector {
+      padding: 50px 15px;
+      .lni {
+        font-size: 100px;
+      }
+    }
+    .selector:hover{
+        background: #e1e1e1
+    }
+    .selector.selected{
+        color:#FFF;
+        background: #493290
+    }
+  }
+}
+

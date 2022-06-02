@@ -15,6 +15,7 @@ import Careers from './Careers/Careers';
 import JobDetails from './Careers/JobDetails';
 import SingIn from './Auth/SignIn/SignIn';
 import SingOn from './Auth/SignOn/SignOn';
+import SingOff from './Auth/SingOff/SingOff';
 
 function Pages() {
   return (
@@ -31,6 +32,7 @@ function Pages() {
 
       <Route path="/auth" element={<SingIn />} />
       <Route path="/auth/join" element={<SingOn />} />
+      <Route path="/auth/recover" element={<SingOff />} />
       <Route path="/how" element={<How />} />
 
       <Route path="/auth" element={<Auth />} />

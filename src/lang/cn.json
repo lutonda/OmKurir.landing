@@ -27,6 +27,18 @@
   "app.label.subscribe": "訂閱",
   "app.label.becomePartener": "成為商業夥伴",
 
+  "app.label.email": "電子郵件",
+  "app.label.password": "密碼",
+  "app.label.repeatPassword": "重複密碼",
+  "app.label.singOn": "唱歌",
+  "app.label.singIn": "唱歌",
+  "app.label.singIn2": "只有賬號？唱歌",
+
+  "app.label.register": "加入什麼？創建一個賬戶",
+  "app.label.forgotPassword": "忘記我的賬號密碼",
+  "app.label.back":"返回",
+  "app.label.recover":"恢復",
+
   "app.service.express.title": "快遞",
   "app.service.express.description": "城內派送服務適合個人寄件。更快更敏捷",
   "app.service.liteExpress.title": "精簡版快遞",
@@ -55,6 +67,17 @@
   "app.contactUs.description": "有問題或評論？一位 PICKUP 代表正在待命。需要交付什麼東西嗎？",
   "app.contactUs.form": "聯繫方式",
   "app.contactUs.formdescription": "今天就聯繫我們，讓您的客戶在同一天和預定的送貨時間從您的公司到他們家。想要送貨上門取貨嗎？立即註冊",
+
+  "app.auth.off.title": "找回忘記的密碼？",
+  "app.auth.off.description": "要重置密碼，請輸入您的電子郵件地址。",
+
+  "app.auth.in.title": "登錄您的賬戶",
+  "app.auth.in.description": "",
+
+  "app.auth.on.title": "註冊",
+  "app.auth.on.description": "註冊創建新賬戶",
+  "app.auth.on.policy": "註冊即表示您接受 OmKurir 用戶協議、隱私政策和 Cookie 政策。",
+  "app.message.sucessRecover": "我們已經向您發送了一封電子郵件",
 
   "app.howItWork.title": "發現新體驗！",
   "app.howItWork.0": "更快到達",

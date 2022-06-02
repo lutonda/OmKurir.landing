@@ -144,4 +144,39 @@ const MainHeader = ({
   );
 };
 
-export { HomeHeader, MainHeader };
+const MiniHeader = ({
+  preTitle = null,
+  title,
+  subTitle = "",
+  Addon = () => <></>,
+}: {
+  preTitle?: string|null;
+  title: string;
+  subTitle: string;
+  Addon?: any;
+}) => {
+  return (
+    <section className="header_area MiniHeader">
+      <Head />
+
+      <div id="home" className="header_hero d-lg-flex align-items-center">
+        <img
+          className="shape shape-1"
+          src="/assets/images/shape-1.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-2"
+          src="/assets/images/shape-2.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-3"
+          src="/assets/images/shape-3.svg"
+          alt="shape"
+        />
+      </div>
+    </section>
+  );
+};
+export { HomeHeader, MainHeader, MiniHeader };

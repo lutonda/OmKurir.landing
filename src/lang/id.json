@@ -8,7 +8,6 @@
   "app.menu.about": "Tentang",
   "app.menu.discover": "Menemukan",
   "app.menu.blog": "Blog",
-  "app.label.becomePartener": "Menjadi Mitra bisnis",
 
   "app.header.title": "{appName} adalah layanan logistik untuk bisnis Anda",
   "app.header.description": "Kami memberikan kemudahan bagi pengguna untuk mengirim barang menggunakan metode pembayaran cash-on-delivery (COD) & cash-and-carry (CAC) tanpa marketplace",
@@ -26,6 +25,20 @@
   "app.label.downloadNow": "Unduh sekarang",
   "app.label.enterManil": "Masukkan Email...",
   "app.label.subscribe": "Berlangganan",
+
+  "app.label.email": "Email",
+  "app.label.password": "Password",
+  "app.label.repeatPassword": "Ulangi kata sandi",
+  "app.label.singOn": "Nyanyikan",
+  "app.label.singIn": "Nyanyikan",
+  "app.label.singIn2": "Hanya punya akun? Nyanyikan",
+
+  "app.label.becomePartener": "Menjadi Mitra bisnis",
+
+  "app.label.register": "Apa yang harus bergabung? buat Akun",
+  "app.label.forgotPassword": "Lupa kata sandi akun saya",
+  "app.label.back": "Kembali",
+  "app.label.recover":"Pulihkan",
 
   "app.service.express.title": "Ekspres",
   "app.service.express.description": "Layanan pengiriman dalam kota cocok untuk pengiriman pribadi. Lebih cepat dan gesit",
@@ -50,6 +63,17 @@
   "app.contactUs.description": "Ada pertanyaan atau komentar? Seorang perwakilan PICKUP siap membantu. Butuh sesuatu yang diantar?",
   "app.contactUs.form": "Formulir kontak",
   "app.contactUs.formdescription": "Hubungi kami hari ini untuk mendapatkan pembelian pelanggan Anda dari bisnis Anda ke rumah mereka dengan hari yang sama dan pengiriman terjadwal. Ingin mengantarkan untuk PICKUP? Daftar Sekarang",
+
+  "app.auth.off.title": "Pulihkan Kata Sandi yang Terlupakan?",
+  "app.auth.off.description": "Untuk mengatur ulang kata sandi Anda, masukkan alamat email Anda.",
+
+  "app.auth.in.title": "Masuk ke akun Anda",
+  "app.auth.in.description": "",
+
+  "app.auth.on.title": "Daftar",
+  "app.auth.on.description": "Daftar untuk membuat akun baru",
+  "app.auth.on.policy": "Dengan mendaftar, Anda menerima Perjanjian Pengguna OmKurir, Kebijakan Privasi, dan Kebijakan Cookie.",
+  "app.message.sucessRecover": "Kami telah mengirimkan Email kepada Anda,",
 
   "app.footer.aboutUs": "Tentang OmKurir",
   "app.aboutus.text.0": "OmKurir menawarkan talenta Pengiriman Pro yang sepenuhnya diperiksa dengan teknologi point-to-point terbaru. Semua untuk pengiriman terkurasi yang andal dari register Anda ke ruang pelanggan. Layanan ahli kami menawarkan ritel bisnis, pengalaman pengiriman hari yang sama tanpa batas yang meningkatkan transaksi tiket besar Anda dan memenuhi standar tinggi pelanggan Anda.",

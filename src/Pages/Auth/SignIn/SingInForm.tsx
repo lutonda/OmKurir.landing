@@ -1,8 +1,8 @@
 import React, { Component, useState } from "react";
-import { Form, Row, Button, Col, Container } from "react-bootstrap";
-import GoogleLogin from "react-google-login";
+import { Form, Button, Container } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 
 function SingInForm() {
   return (
@@ -11,9 +11,12 @@ function SingInForm() {
         <div className="col-md-12">
           <div className="title" style={{ textAlign: "left" }}>
             <h2>
-              <FormattedMessage id={"app.contactUs.form"} />
+              <FormattedMessage id={"app.auth.in.title"} />
             </h2>
-            <FormattedMessage id={"app.contactUs.formdescription"} />
+            <FormattedMessage id={"app.auth.in.description"} />
+            <br />
+            <br />
+            <br />
           </div>
 
           <div className="subtitle"></div>
@@ -26,12 +29,6 @@ function SingInForm() {
   );
 }
 
-const handleFailure = (result: any) => {
-  alert(JSON.stringify(result));
-};
-const handleLogin = (result: any) => {
-  alert(JSON.stringify(result));
-};
 function SimpleForm() {
   const initialState = {
     email: "",
@@ -43,14 +40,13 @@ function SimpleForm() {
     const obj: any = { [event.target.name]: event.target.value };
     setState(obj);
   };
-  const { GOOGLE_API_CLIENT_KEY } = process.env;
   const { email, password } = state;
 
   return (
     <Container>
       <Form>
         <Form.Group controlId="form.Email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label><FormattedMessage id={"app.label.email"} /></Form.Label>
           <Form.Control
             type="email"
             placeholder="name@example.com"
@@ -61,7 +57,7 @@ function SimpleForm() {
           />
         </Form.Group>
         <Form.Group controlId="form.password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label><FormattedMessage id={"app.label.password"} /></Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter your password"
@@ -72,23 +68,22 @@ function SimpleForm() {
           />
         </Form.Group>
       </Form>
+      <div className="text-right">
+        <Link className="wow fadeInUp pull-right" to="/auth/recover">
+          <FormattedMessage id={"app.label.forgotPassword"} />
+        </Link>
+      </div>
       <p>
         <hr />
       </p>
       <Button variant="primary" className="main-btn wow fadeInUp">
-        Sing In
-      </Button>
-      <GoogleLogin
-        clientId={GOOGLE_API_CLIENT_KEY??''}
-        buttonText="Login with Google"
-        onSuccess={handleLogin}
-        onFailure={handleFailure}
-        cookiePolicy="single_host_origin"
-      ></GoogleLogin>
+        <FormattedMessage id={"app.label.singIn"} />
+      </Button>{" "}
+      <GoogleAuth />
       <br />
       <br />
       <Link className="wow fadeInUp" to="/auth/join">
-        Create an Account {process.env.GOOGLE_API_CLIENT_KEY}
+        <FormattedMessage id={"app.label.register"} />
       </Link>
     </Container>
   );
