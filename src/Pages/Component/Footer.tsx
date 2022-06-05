@@ -196,7 +196,7 @@ export default function Footer() {
                 Copyright &copy 2022 OmKurir. All Rights Reserved.
               </span>
               |<Link className="page-scroll" to="#">Privacy Policy</Link>| <Link className="page-scroll" to="#">Site Map</Link>|
-              <Link className="page-scroll" to="#">Terms of Service</Link>
+              <Link className="page-scroll" to="#">Terms of Service</Link> |<div>Build version: %REACTBUILDVERSION%</div>
             </div>
           </div>
         </div>

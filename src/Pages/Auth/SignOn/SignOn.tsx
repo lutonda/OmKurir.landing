@@ -1,10 +1,12 @@
-
-import React from "react";
+import React, { useState } from "react";
 import "./SignOn.scss";
 import { Footer, MiniHeader as Header } from "../../Component";
 import SingOnForm from "./SingOnForm";
+import { connect } from "react-redux";
+import { SingOnAction } from "../../../Api/Actions/AuthAction";
 
-const SingOn = () => {
+const SingOn = (props: any) => {
+  const { user, register } = props;
   return (
     <>
       <Header title="app.footer.careers" subTitle="app.careers.description" />
@@ -15,11 +17,23 @@ const SingOn = () => {
         data-wow-delay="0.2s"
       >
         <div className="col-md-6 mx-auto">
-          <SingOnForm/>        
+          <SingOnForm register={register} />
         </div>
       </div>
       <Footer />
     </>
   );
 };
-export default SingOn;
+
+const mapStateToProps = (state: any) => {
+  return { user: state };
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    register: (userState: any, props: any = {}) => {
+      dispatch(SingOnAction(userState, props));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SingOn);

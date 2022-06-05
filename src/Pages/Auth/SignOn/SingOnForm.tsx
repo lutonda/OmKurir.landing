@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 import "./SignOnForm.scss";
-function SingOnForm() {
+function SingOnForm({ register }: { register: any }) {
   return (
     <div id="singOnForm" className="form-wrapper-content">
       <div className="content">
@@ -22,7 +22,7 @@ function SingOnForm() {
           <div className="subtitle"></div>
         </div>
         <div style={{ textAlign: "left" }}>
-          <SimpleForm />
+          <SimpleForm register={register} />
         </div>
       </div>
     </div>
@@ -35,7 +35,8 @@ const handleFailure = (result: any) => {
 const handleLogin = (result: any) => {
   alert(JSON.stringify(result));
 };
-function SimpleForm() {
+function SimpleForm(props: any) {
+  const { user, register } = props;
   const initialState = {
     type: NaN,
     email: "",
@@ -46,53 +47,62 @@ function SimpleForm() {
   const [state, setState] = useState(initialState);
   const handleChange = (event: any) => {
     const obj: any = { [event.target.name]: event.target.value };
-    setState(obj);
+
+    setState({ ...state, ...obj });
   };
 
   const { type, email, password, repeatPassword } = state;
-  const selectHandler = (type: number) =>setState({ type });
+  const selectHandler = (t: number) => {
+    const obj: any = { type: t };
+    setState(obj);
+  };
   return (
     <Container>
       <Form>
         {isNaN(type) ? (
           <>
             <Row>
-                <div id="registationType" className="col-md-12">
-              <div className="row">
-                    <div
-                      className={
-                        "col-md-6 selector text-center " +
-                        (type == 1 ? "selected" : "")
-                      }
-                      onClick={() => selectHandler(1)}
-                    >
-                      <i className="lni lni-apartment"></i>
-                      <p>Business account</p>
-                    </div>
-                    <div
-                      className={
-                        "col-md-6 selector text-center " +
-                        (type == 0 ? "selected" : "")
-                      }
-                      onClick={() => selectHandler(0)}
-                    >
-                      <i className="lni lni-user"></i>
-                      <p>Personal account</p>
-                    </div>
+              <div id="registationType" className="col-md-12">
+                <div className="row">
+                  <div
+                    className={
+                      "col-md-6 selector text-center " +
+                      (type == 1 ? "selected" : "")
+                    }
+                    onClick={() => selectHandler(1)}
+                  >
+                    <i className="lni lni-apartment"></i>
+                    <p>Business account</p>
                   </div>
+                  <div
+                    className={
+                      "col-md-6 selector text-center " +
+                      (type == 0 ? "selected" : "")
+                    }
+                    onClick={() => selectHandler(0)}
+                  >
+                    <i className="lni lni-user"></i>
+                    <p>Personal account</p>
                   </div>
+                </div>
+              </div>
             </Row>
           </>
         ) : (
           <>
-            <div className="alert alert-primary main-btn wow fadeInUp" role="alert" style={{width:'100%', textAlign:"left"}}>
+            <div
+              className="alert alert-primary main-btn wow fadeInUp"
+              role="alert"
+              style={{ width: "100%", textAlign: "left" }}
+            >
               {type === 0 ? (
                 <>
                   <i className="lni lni-user"></i> Creating a Personal account
                 </>
               ) : (
                 <>
-                  <i className="lni lni-apartment"></i> Creating a Business account
+                  <i className="lni lni-apartment"></i> Creating a Business
+                  account
                 </>
               )}
             </div>
@@ -102,7 +112,6 @@ function SimpleForm() {
               </Form.Label>
               <Form.Control
                 type="email"
-                placeholder="name@example.com"
                 defaultValue={email}
                 name="email"
                 required
@@ -115,7 +124,6 @@ function SimpleForm() {
               </Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Enter your password"
                 defaultValue={password}
                 name="password"
                 required
@@ -128,9 +136,8 @@ function SimpleForm() {
               </Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Repeat your password"
                 defaultValue={repeatPassword}
-                name="password"
+                name="repeatPassword"
                 required
                 onChange={handleChange}
               />
@@ -140,15 +147,19 @@ function SimpleForm() {
                 <FormattedMessage id={"app.auth.on.policy"} />
               </span>
             </div>
+            <p>
+              <hr />
+            </p>
+            <Button
+              onClick={() => register(state, props)}
+              variant="primary"
+              className="main-btn wow fadeInUp"
+            >
+              <FormattedMessage id={"app.label.singOn"} />
+            </Button>
           </>
         )}
       </Form>
-      <p>
-        <hr />
-      </p>
-      <Button variant="primary" className="main-btn wow fadeInUp">
-        <FormattedMessage id={"app.label.singOn"} />
-      </Button>
       <br />
       <br />
       <Link className="wow fadeInUp" to="/auth">

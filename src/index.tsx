@@ -10,6 +10,12 @@ import Chinese from "./lang/cn.json";
 import Indonesian from "./lang/id.json";
 import English from "./lang/en.json";
 import Wrapper from "./Component/Wrapper";
+import { Provider } from "react-redux";
+import store from "./Api/reducers/store";
+
+import axios from "axios";
+
+axios.defaults.baseURL = "https://4000-lutonda-omkurirserver-igktnl1qcew.ws-eu46.gitpod.io/api/v2/"
 
 let locale = navigator.language;
 
@@ -33,9 +39,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <IntlProvider locale={locale} messages={English}>
-      <Wrapper>
-        <App />
-      </Wrapper>
+      <Provider store={store}>
+        <Wrapper>
+          <App />
+        </Wrapper>
+      </Provider>
     </IntlProvider>
   </React.StrictMode>
 );

@@ -3,8 +3,10 @@ import "./Header.scss";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+import AuthHead from "./AuthHead";
 
-export default function Head() {
+const Head = ({ auth }: { auth: any }) => {
   const { pathname } = useLocation();
   const root = pathname === "/";
   return (
@@ -41,44 +43,63 @@ export default function Head() {
               >
                 <ul id="nav" className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                    <a className="page-scroll" href={(root ? '' : '/')+"#home"}>
+                    <a
+                      className="page-scroll"
+                      href={(root ? "" : "/") + "#home"}
+                    >
                       <FormattedMessage id="app.menu.home" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="page-scroll" href={(root ? '' : '/')+"#features"}>
+                    <a
+                      className="page-scroll"
+                      href={(root ? "" : "/") + "#features"}
+                    >
                       <FormattedMessage id="app.menu.features" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="page-scroll" href={(root ? '' : '/')+"#about"}>
+                    <a
+                      className="page-scroll"
+                      href={(root ? "" : "/") + "#about"}
+                    >
                       <FormattedMessage id="app.menu.about" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="page-scroll" href={(root ? '' : '/')+"#howItWork"}>
+                    <a
+                      className="page-scroll"
+                      href={(root ? "" : "/") + "#howItWork"}
+                    >
                       <FormattedMessage id="app.menu.discover" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="page-scroll" href={(root ? '' : '/')+"#blog"}>
+                    <a
+                      className="page-scroll"
+                      href={(root ? "" : "/") + "#blog"}
+                    >
                       <FormattedMessage id="app.menu.blog" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <Link
-                      className="main-btn wow fadeInUp"
-                      data-wow-duration="1.3s"
-                      data-wow-delay="1s"
-                      to="/auth"
-                      style={{
-                        padding: " 0 25px",
-                        height: " 35px",
-                        lineHeight: "35px",
-                      }}
-                    >
-                      Join the family
-                    </Link>
+                    {auth.isLogedIn ? 
+                      <AuthHead auth={auth}/>
+                    : (
+                      <Link
+                        className="main-btn wow fadeInUp"
+                        data-wow-duration="1.3s"
+                        data-wow-delay="1s"
+                        to="/auth"
+                        style={{
+                          padding: " 0 25px",
+                          height: " 35px",
+                          lineHeight: "35px",
+                        }}
+                      >
+                        Join the family
+                      </Link>
+                    )}
                   </li>
 
                   <li className="nav-item">
@@ -92,4 +113,17 @@ export default function Head() {
       </div>
     </div>
   );
-}
+};
+
+const mapStateToProps = (state: any) => {
+  return { auth: state };
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    register: (userState: any) => {
+      console.log(userState);
+    },
+  };
+};
+export default /* SingOn;*/ connect(mapStateToProps, mapDispatchToProps)(Head);

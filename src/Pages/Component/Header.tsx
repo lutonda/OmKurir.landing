@@ -94,7 +94,7 @@ const MainHeader = ({
   subTitle = "",
   Addon = () => <></>,
 }: {
-  preTitle?: string|null;
+  preTitle?: string | null;
   title: string;
   subTitle: string;
   Addon?: any;
@@ -124,9 +124,7 @@ const MainHeader = ({
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="header_hero_content mt-45">
-                <h4>{preTitle ? <FormattedMessage id={preTitle} /> : ""}
-                  
-                </h4>
+                <h4>{preTitle ? <FormattedMessage id={preTitle} /> : ""}</h4>
                 <h1>
                   <FormattedMessage id={title} />
                 </h1>
@@ -150,7 +148,7 @@ const MiniHeader = ({
   subTitle = "",
   Addon = () => <></>,
 }: {
-  preTitle?: string|null;
+  preTitle?: string | null;
   title: string;
   subTitle: string;
   Addon?: any;
@@ -179,4 +177,41 @@ const MiniHeader = ({
     </section>
   );
 };
-export { HomeHeader, MainHeader, MiniHeader };
+
+const UserHeader = ({
+  preTitle = null,
+  title,
+  subTitle = "",
+  Addon = () => <></>,
+}: {
+  preTitle?: string | null;
+  title: string;
+  subTitle: string;
+  Addon?: any;
+}) => {
+  return (
+    <section className="header_area UserHeader">
+      <Head />
+      
+      <div id="home" className="header_hero d-lg-flex align-items-center">
+        <img
+          className="shape shape-1"
+          src="/assets/images/shape-1.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-2"
+          src="/assets/images/shape-2.svg"
+          alt="shape"
+        />
+        <img
+          className="shape shape-3"
+          src="/assets/images/shape-3.svg"
+          alt="shape"
+        />
+        <Addon />
+      </div>
+    </section>
+  );
+};
+export { HomeHeader, MainHeader, MiniHeader, UserHeader };

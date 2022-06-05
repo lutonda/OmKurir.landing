@@ -59,3 +59,24 @@
   }
   
 }
+
+.UserHeader {
+  .header_hero {
+    max-height: 215px !important;
+    background-position: center !important;
+    .container{
+      h1, h3, h4{
+        color: #FFFF;
+      }
+    }
+  }
+  .header_hero::before {
+    height: 215px !important;
+    background-position: top !important;
+  }
+  .shape.shape-2 {
+    bottom: auto !important;
+    left: calc((100% - 1700px) / 2);
+  }
+  
+}

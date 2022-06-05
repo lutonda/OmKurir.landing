@@ -16,6 +16,7 @@ import JobDetails from './Careers/JobDetails';
 import SingIn from './Auth/SignIn/SignIn';
 import SingOn from './Auth/SignOn/SignOn';
 import SingOff from './Auth/SingOff/SingOff';
+import User from './Auth/User/User';
 
 function Pages() {
   return (
@@ -30,12 +31,13 @@ function Pages() {
       <Route path="/careers" element={<Careers />} />
       <Route path="/careers/jobdetails/:id" element={<JobDetails />} />
 
+      
+      <Route path="/mykurir" element={<User />} />
       <Route path="/auth" element={<SingIn />} />
       <Route path="/auth/join" element={<SingOn />} />
       <Route path="/auth/recover" element={<SingOff />} />
       <Route path="/how" element={<How />} />
 
-      <Route path="/auth" element={<Auth />} />
     </Routes>
     
   );

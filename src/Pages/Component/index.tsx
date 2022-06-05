@@ -1,4 +1,4 @@
-import { MainHeader, HomeHeader, MiniHeader } from "./Header";
+import { MainHeader, HomeHeader, MiniHeader, UserHeader } from "./Header";
 import Menu from "./Menu";
 import Subscribe from "./Subscribe";
 import Footer from "./Footer";
@@ -8,6 +8,7 @@ export {
   MainHeader,
   MiniHeader,
   HomeHeader,
+  UserHeader,
   Menu,
   Subscribe,
   Footer,
