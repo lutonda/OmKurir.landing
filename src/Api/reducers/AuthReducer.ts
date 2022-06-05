@@ -30,7 +30,6 @@ const AuthReducer = (state: any = GetAuthState(), action: any) => {
   //if (state.isLogedIn) return state;
   switch (action.type) {
     case AuthActionTypes.SINGOUT_OUT:
-      alert(123);
       localStorage.removeItem(STORAGE_KEY);
       return dafaultState;
       break;

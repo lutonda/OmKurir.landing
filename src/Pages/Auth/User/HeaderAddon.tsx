@@ -24,25 +24,25 @@ const HeaderAddon = ({ auth, singOut }: { auth: any; singOut: any }) => {
           <div className="col-md-10" style={{ margin: "3% 0" }}>
             <div className="row">
               <span style={{ color: "#FFF" }}>Hi! {auth.user.email} | </span>
-              <Button onClick={()=>singOut({})} style={{ color: "#FFF" }}>
+              <span onClick={()=>singOut({})} style={{ color: "#FFF" }}>
                 {" "}
                 Sign out
-              </Button>
+              </span>
             </div>
             <div className="row">
-              <Button type="button" className="btn btn-light">
+              <Link to="/" className="btn btn-light">
                 <i className="lni lni-tab"></i>
                 <FormattedMessage id={"app.label.singOn"} />
-              </Button>
-              <Button variant="primary" className="main-btn wow fadeInUp">
+              </Link>
+              <Link to="/" className="main-btn wow fadeInUp">
                 <i className="lni lni-list"></i>{" "}
                 <FormattedMessage id={"app.label.singOn"} />
-              </Button>
+              </Link>
 
-              <Button variant="primary" className="btn btn-light">
+              <Link to="/" className="btn btn-light">
                 <i className="lni lni-control-panel"></i>
                 <FormattedMessage id={"app.label.singOn"} />
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

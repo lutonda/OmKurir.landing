@@ -25,7 +25,7 @@ const SingOutAction = (userState: any) => {
     try {
       await dispatch({ type: AuthActionTypes.SINGOUT_OUT, payload: {} });
       
-      //setTimeout(() => (location.href = "/"), 2000);
+      location.href = "/";
     } catch (error: any) {
       console.error(error);
     }
