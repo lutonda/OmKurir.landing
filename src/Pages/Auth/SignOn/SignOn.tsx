@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { SingOnAction } from "../../../Api/Actions/AuthAction";
 
 const SingOn = (props: any) => {
+  
   const { user, register } = props;
   return (
     <>

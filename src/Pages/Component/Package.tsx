@@ -8,6 +8,7 @@ const Card = () => {
       className="card wow fadeInUp"
       data-wow-duration="1.3s"
       data-wow-delay="1s"
+      style={{marginBottom: 15}}
     >
       <div className="card-header">Featured</div>
       <div className="card-body">

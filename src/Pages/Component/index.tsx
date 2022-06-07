@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import Subscribe from "./Subscribe";
 import Footer from "./Footer";
 import Preloader from "./Preloader";
+import Modal from './Modal';
 
 export {
   MainHeader,
@@ -13,4 +14,5 @@ export {
   Subscribe,
   Footer,
   Preloader,
+  Modal,
 };

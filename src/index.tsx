@@ -15,7 +15,7 @@ import store from "./Api/reducers/store";
 
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:4000/api/v2/"
+axios.defaults.baseURL = "https://api.omkurir.hiperbite.ao/api/v2/"
 
 let locale = navigator.language;
 

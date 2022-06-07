@@ -1,7 +1,52 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import { Form, Row, Button, Col, Container } from "react-bootstrap";
-import "./SignOnForm.scss";
-function SingOnForm() {
+
+import { UserFindAction } from "../../../../Api/Actions/UserAction";
+import "../../SignOn/SignOnForm.scss";
+
+import "./UpdateUser.scss";
+import { Footer, UserHeader as Header } from "../../../Component";
+
+import { connect } from "react-redux";
+import { CompleteSingOnAction } from "../../../../Api/Actions/AuthAction";
+import HeaderAddon from "../HeaderAddon";
+import { FormattedMessage } from "react-intl";
+
+const UpdateUser = (props: any) => {
+
+  const { auth, register, singOut } = props;
+  const [update, setUpdate] = useState(!auth.user.isActive)
+  return (
+    <>
+      <Header
+        title="app.footer.careers"
+        Addon={() => update ? <></> : <HeaderAddon singOut={singOut} auth={auth} setUpdate={setUpdate} />}
+        subTitle="app.careers.description"
+      />
+
+      <div
+        id="updateUser"
+        className="container single_features mt-30 features_1  wow fadeInUp"
+        data-wow-duration="1.3s"
+        data-wow-delay="0.2s"
+      >
+        <div className="col-md-9 mx-auto">
+
+          <div
+            className="paylocity job-item wow fadeInUp"
+            data-wow-duration="1.3s"
+            data-wow-delay="1s"
+          >
+            <UpdateUserForm user={auth.user} />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+const UpdateUserForm = ({ user }: { user: any }) => {
+  const [step, setStep] = useState(0)
   return (
     <div
       id="singOnForm"
@@ -14,16 +59,38 @@ function SingOnForm() {
         <div className="content">
           <div className="col-md-12 title-wrapper">
             <div className="title" style={{ textAlign: "left" }}>
-              <h2>Business Partners submition form</h2>
-              Contact us today to get your customers’ purchases from your
-              business to their home with same day and scheduled delivery. Want
-              to deliver for PICKUP? Sign Up Now
+              <hr />
+              <h2><FormattedMessage id="app.auth.on.complete" /></h2>
+              <FormattedMessage id="app.auth.on.completeObs" />
             </div>
 
             <div className="subtitle"></div>
           </div>
-          <div style={{ textAlign: "left" }}>
-            <MultiStepForm />
+          <div style={{ textAlign: "left" }} className="row">
+            <div className="col-md-3">
+              <ul className="list-group">
+                <Button onClick={() => setStep(0)} className={"list-group-item" + (step === 0 ? ' active' : '')} aria-current="true">
+                  <i className="lni lni-user"></i> {" "}
+                  <FormattedMessage id="app.label.userdata" /></Button>
+                <Button onClick={() => setStep(1)} className={"list-group-item" + (step === 1 ? ' active' : '')}>
+                  <i className="lni lni-map"></i> {" "}
+                  <FormattedMessage id="app.label.address" /></Button>
+                <Button onClick={() => setStep(2)} className={"list-group-item" + (step === 2 ? ' active' : '')}>
+                  <i className="lni lni-files"></i>{" "}
+                  <FormattedMessage id="app.label.docs" />
+                </Button>
+                <Button onClick={() => setStep(3)} className={"list-group-item" + (step === 3 ? ' active' : '')}>
+                  <i className="lni lni-image"></i>{" "}
+                  <FormattedMessage id="app.label.avatar" />
+                </Button>
+                <Button onClick={() => setStep(3)} className={"list-group-item" + (step === 4 ? ' active' : '')}>
+                  <i className="lni lni-control-panel"></i> {" "}
+                  <FormattedMessage id="app.label.settings" /></Button>
+              </ul>
+            </div>
+            <div className="col-md-9">
+              <SimpleForm user={user} step={step} />
+            </div>
           </div>
         </div>
       </div>
@@ -31,196 +98,32 @@ function SingOnForm() {
   );
 }
 
-class MultiStepForm extends Component {
-  state = {
-    step: 0,
-    total: 4,
-    type: null,
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    city: "",
-    state: "",
-    zip: "",
+const SimpleForm = ({ user, step }: { user: any, step: number }) => {
+  const initialState = {
+    ...{
+      address: [],
+    }, ...user.user
   };
+  const [state, setState] = useState(initialState)
+  const handleChange = (event: any) =>
+    setState({ ...state, ...{ [event.target.name]: event.target.value } });
 
-  nextStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1,
-    });
-  };
+  const handleChangeAddress = (address: any) =>
+    setState({ ...state, ...{ address } });
 
-  prevStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step - 1,
-    });
-  };
-
-  handleChange = (event: any) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  render() {
-    const {
-      total,
-      step,
-      type,
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      address,
-      city,
-      state,
-      zip,
-    } = this.state;
-    const inputValues = {
-      type,
-      firstName,
-      lastName,
-      email,
-      address,
-      city,
-      state,
-      zip,
-      phoneNumber,
-    };
-    switch (step) {
-      case 0:
-        return (
-          <>
-            <ProgressBar step={step} total={total} />
-            <br />
-            <RegistationType
-              nextStep={this.nextStep}
-              handleChange={this.handleChange}
-              inputValues={inputValues}
-            />
-          </>
-        );
-      case 1:
-        return (
-          <>
-            <ProgressBar step={step} total={total} />
-            <br />
-            <UserDetails
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              handleChange={this.handleChange}
-              inputValues={inputValues}
-            />
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <ProgressBar step={step} total={total} />
-            <br />
-            <AddressDetails
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              handleChange={this.handleChange}
-              inputValues={inputValues}
-            />
-          </>
-        );
-      case 3:
-        return (
-          <>
-            <ProgressBar step={step} total={total} />
-            <br />
-            <Attachments
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              handleChange={this.handleChange}
-              inputValues={inputValues}
-            />
-          </>
-        );
-      case 4:
-        return (
-          <>
-            <ProgressBar step={step} total={total} />
-            <br />
-            <Confirmation
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              inputValues={inputValues}
-            />
-          </>
-        );
-    }
+  const submitChanges = () => {
+    // completesingOn(state, { navigate })
   }
+  const Forms = [UserDetails, AddressDetails, Attachments, Confirmation][step];
+
+  return (<>
+    <Forms
+      handleChange={handleChange}
+      inputValues={state}
+    /></>)
 }
 
-function RegistationType(form: any) {
-  const {
-    inputValues: { type },
-  } = form;
-
-  const back = (e: any) => {
-    e.preventDefault();
-    form.prevStep();
-  };
-
-  const saveAndContinue = (e: any) => {
-    e.preventDefault();
-    form.nextStep();
-  };
-
-  const selectHandler = (t: number) => {
-    form.handleChange({ target: { name: "type", value: t } });
-  };
-  return (
-    <Container id="registationType">
-      <Form>
-        <Row>
-          <div className="col-md-12">
-            <div className="col-md-8 mx-auto">
-              <div className="row">
-                <div
-                  className={
-                    "col-md-6 selector text-center " +
-                    (type == 1 ? "selected" : "")
-                  }
-                  onClick={() => selectHandler(1)}
-                >
-                  <i className="lni lni-apartment"></i>
-                  <p>Business account</p>
-                </div>
-                <div
-                  className={
-                    "col-md-6 selector text-center " +
-                    (type == 0 ? "selected" : "")
-                  }
-                  onClick={() => selectHandler(0)}
-                >
-                  <i className="lni lni-user"></i>
-                  <p>Personal account</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Row>
-        <p>
-          <hr />
-        </p>
-        <Button
-          variant="primary"
-          onClick={saveAndContinue}
-          className="main-btn wow fadeInUp"
-        >
-          Next <i className="lni lni-chevron-right"></i>
-        </Button>
-      </Form>
-    </Container>
-  );
-}
-function UserDetails(form: any) {
+const UserDetails = (form: any) => {
   const back = (e: any) => {
     e.preventDefault();
     form.prevStep();
@@ -236,7 +139,9 @@ function UserDetails(form: any) {
       <Form>
         <Row>
           <Form.Group as={Col} controlId="formFirstName">
-            <Form.Label className="label">First Name</Form.Label>
+            <Form.Label className="label">
+              <FormattedMessage id="app.label.firstName" />
+            </Form.Label>
             <Form.Control
               type="text"
               defaultValue={form.inputValues.firstName}
@@ -247,7 +152,7 @@ function UserDetails(form: any) {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formLastName">
-            <Form.Label className="label">Last Name</Form.Label>
+            <Form.Label className="label"><FormattedMessage id="app.label.lastName" /></Form.Label>
             <Form.Control
               type="text"
               defaultValue={form.inputValues.lastName}
@@ -259,17 +164,18 @@ function UserDetails(form: any) {
         </Row>
 
         <Form.Group controlId="formEmail">
-          <Form.Label className="label">Email Address</Form.Label>
+          <Form.Label className="label"><FormattedMessage id="app.label.emailAddress" /></Form.Label>
           <Form.Control
             type="email"
             defaultValue={form.inputValues.email}
             name="email"
+            readOnly
             required
             onChange={form.handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formPhoneNumber">
-          <Form.Label className="label">Phone Number</Form.Label>
+        <Form.Group controlId="formphoneNumber">
+          <Form.Label className="label"><FormattedMessage id="app.label.emailAddress" /></Form.Label>
           <Form.Control
             type="text"
             defaultValue={form.inputValues.phoneNumber}
@@ -283,24 +189,18 @@ function UserDetails(form: any) {
         </p>
         <Button
           variant="primary"
-          onClick={back}
-          className="main-btn wow fadeInUp"
-        >
-          <i className="lni lni-chevron-left"></i> Back 
-        </Button>{" "}
-        <Button
-          variant="primary"
           onClick={saveAndContinue}
           className="main-btn wow fadeInUp"
-        >
-          Next <i className="lni lni-chevron-right"></i>
+        ><FormattedMessage id="app.label.save" />
+          <i className="lni lni-chevron-right"></i>
         </Button>
       </Form>
     </Container>
   );
 }
 
-function AddressDetails(form: any) {
+const AddressDetails = (form: any) => {
+  const [address, setAddress] = useState(form.inputValues.address[0] ?? {})
   const back = (e: any) => {
     e.preventDefault();
     form.prevStep();
@@ -310,39 +210,43 @@ function AddressDetails(form: any) {
     e.preventDefault();
     form.nextStep();
   };
-
+  const handleChange = (event: any) => {
+    let newAddress = { ...address, ...{ [event.target.name]: event.target.value } };
+    setAddress(newAddress)
+    form.handleChange([newAddress])
+  };
   return (
     <Container>
       <Form>
         <Form.Group controlId="formAddress">
-          <Form.Label>Address</Form.Label>
+          <Form.Label><FormattedMessage id="app.label.address" /></Form.Label>
           <Form.Control
             type="text"
-            defaultValue={form.inputValues.address}
+            defaultValue={address.address}
             name="address"
             required
-            onChange={form.handleChange}
+            onChange={handleChange}
           />
         </Form.Group>
         <Row>
           <Form.Group as={Col} controlId="formCity">
-            <Form.Label>City</Form.Label>
+            <Form.Label><FormattedMessage id="app.label.city" /></Form.Label>
             <Form.Control
               type="text"
-              defaultValue={form.inputValues.city}
+              defaultValue={address.city}
               name="city"
               required
-              onChange={form.handleChange}
+              onChange={handleChange}
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formState">
-            <Form.Label>State</Form.Label>
+          <Form.Group as={Col} controlId="formProvince">
+            <Form.Label><FormattedMessage id="app.label.province" /></Form.Label>
             <Form.Control
               as="select"
-              name="state"
-              defaultValue={form.inputValues.state}
-              onChange={form.handleChange}
+              name="province"
+              defaultValue={address.province}
+              onChange={handleChange}
             >
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -397,17 +301,6 @@ function AddressDetails(form: any) {
               <option value="WY">Wyoming</option>
             </Form.Control>
           </Form.Group>
-
-          <Form.Group as={Col} controlId="formZip">
-            <Form.Label>Zip</Form.Label>
-            <Form.Control
-              type="text"
-              defaultValue={form.inputValues.zip}
-              name="zip"
-              required
-              onChange={form.handleChange}
-            />
-          </Form.Group>
         </Row>
         <p>
           <hr />
@@ -425,14 +318,14 @@ function AddressDetails(form: any) {
           onClick={saveAndContinue}
           className="main-btn wow fadeInUp"
         >
-          Next <i className="lni lni-chevron-right"></i>
+          <FormattedMessage id="app.label.save" /> <i className="lni lni-chevron-right"></i>
         </Button>
       </Form>
     </Container>
   );
 }
 
-function Attachments(form: any) {
+const Attachments = (form: any) => {
   const back = (e: any) => {
     e.preventDefault();
     form.prevStep();
@@ -490,26 +383,18 @@ function Attachments(form: any) {
           <hr />
         </p>
         <Button
-          variant="secondary"
-          onClick={back}
-          className="main-btn wow fadeInUp"
-        >
-          <i className="lni lni-chevron-left"></i>
-          Back
-        </Button>{" "}
-        <Button
           variant="primary"
           onClick={saveAndContinue}
           className="main-btn wow fadeInUp"
         >
-          Next <i className="lni lni-chevron-right"></i>
+          <FormattedMessage id="app.label.save" /> <i className="lni lni-chevron-right"></i>
         </Button>
       </Form>
     </Container>
   );
 }
 
-function Confirmation(form: any) {
+const Confirmation = (form: any) => {
   const back = (e: any) => {
     e.preventDefault();
     form.prevStep();
@@ -517,7 +402,7 @@ function Confirmation(form: any) {
 
   const saveAndContinue = (e: any) => {
     e.preventDefault();
-    form.nextStep();
+    form.submit();
   };
 
   const {
@@ -532,10 +417,14 @@ function Confirmation(form: any) {
       <p>First Name: {firstName}</p>
       <p>Last Name: {lastName}</p>
       <p>Email: {email}</p>
-      <p>Adress: {address}</p>
-      <p>City: {city}</p>
-      <p>State: {state}</p>
-      <p>Zip: {zip}</p>
+      {address.map(({ address, city, province }: { address: string, city: string, province: string }) => {
+
+        return (<>
+          <p>Adress: {address}</p>
+          <p>City: {city}</p>
+          <p>State: {province}</p>
+        </>)
+      })}
       <p>
         <hr />
       </p>
@@ -546,11 +435,11 @@ function Confirmation(form: any) {
       >
         <i className="lni lni-chevron-left"></i> Back
       </Button>{" "}
-      <Button variant="primary" className="main-btn wow fadeInUp">
-        Confirm
+      <Button variant="primary" className="main-btn wow fadeInUp" onClick={saveAndContinue}>
+        Confirm {" "}
         <i className="lni lni-checkmark"></i>
       </Button>
-    </Container>
+    </Container >
   );
 }
 const ProgressBar = ({ step, total }: { step: number; total: number }) => {
@@ -568,4 +457,16 @@ const ProgressBar = ({ step, total }: { step: number; total: number }) => {
     </div>
   );
 };
-export default SingOnForm;
+const mapStateToProps = (state: any) => {
+  return { auth: state };
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    findUser: (userState: any, props: any) => dispatch(UserFindAction(userState, props)),
+    CompletesingOn: (userState: any, props: any) => {
+      dispatch(CompleteSingOnAction(userState, props));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateUser);

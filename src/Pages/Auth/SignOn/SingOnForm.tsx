@@ -1,10 +1,11 @@
 import React, { Component, useState } from "react";
 import { Form, Row, Button, Col, Container } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./SignOnForm.scss";
 function SingOnForm({ register }: { register: any }) {
+  const navigate = useNavigate();
   return (
     <div id="singOnForm" className="form-wrapper-content">
       <div className="content">
@@ -22,7 +23,7 @@ function SingOnForm({ register }: { register: any }) {
           <div className="subtitle"></div>
         </div>
         <div style={{ textAlign: "left" }}>
-          <SimpleForm register={register} />
+          <SimpleForm register={register} navigate={navigate} />
         </div>
       </div>
     </div>
@@ -45,6 +46,7 @@ function SimpleForm(props: any) {
   };
 
   const [state, setState] = useState(initialState);
+  const [validated, setValidated] = useState(false);
   const handleChange = (event: any) => {
     const obj: any = { [event.target.name]: event.target.value };
 
@@ -56,9 +58,26 @@ function SimpleForm(props: any) {
     const obj: any = { type: t };
     setState(obj);
   };
+
+  const handleSubmit = (e: any) => {
+    debugger
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      setValidated(false);
+    } else {
+      setValidated(true);
+      register(state, props)
+
+    }
+
+    e.preventDefault();
+  }
   return (
     <Container>
-      <Form>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         {isNaN(type) ? (
           <>
             <Row>
@@ -117,6 +136,8 @@ function SimpleForm(props: any) {
                 required
                 onChange={handleChange}
               />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">Enter your valid E-mail.</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="form.password">
               <Form.Label>
@@ -124,11 +145,14 @@ function SimpleForm(props: any) {
               </Form.Label>
               <Form.Control
                 type="password"
+                min={6} max={16}
                 defaultValue={password}
                 name="password"
                 required
                 onChange={handleChange}
               />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">chose your password.</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="form.password">
               <Form.Label>
@@ -141,6 +165,8 @@ function SimpleForm(props: any) {
                 required
                 onChange={handleChange}
               />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">Repeat your password.</Form.Control.Feedback>
             </Form.Group>
             <div>
               <span>
@@ -148,10 +174,9 @@ function SimpleForm(props: any) {
               </span>
             </div>
             <p>
-              <hr />
             </p>
             <Button
-              onClick={() => register(state, props)}
+              type={"submit"}
               variant="primary"
               className="main-btn wow fadeInUp"
             >

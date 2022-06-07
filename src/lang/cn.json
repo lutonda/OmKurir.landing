@@ -8,37 +8,47 @@
   "app.menu.about": "關於",
   "app.menu.discover": "發現",
   "app.menu.blog": "博客",
-
   "app.header.title": "{appName} 是為您的企業提供的物流服務",
   "app.header.description": "我們使用戶可以使用貨到付款 (COD) 和現金自運 (CAC) 付款方式輕鬆發送商品，而無需市場",
-
   "app.order.title": "計算您的運費",
   "app.order.description": "市內送貨服務適合個人。 更快更敏捷",
   "app.order.check": "檢查郵資",
-
   "app.track.title": "跟踪交貨",
   "app.track.description": "市內派送服務適合個人寄件。 更快更敏捷",
-
   "app.label.sid_code": "SID 代碼:",
   "app.label.discoverMore": "發現更多",
   "app.label.download": "下載",
   "app.label.downloadNow": "現在下載",
   "app.label.enterManil": "輸入郵箱...",
   "app.label.subscribe": "訂閱",
+  "app.label.settings": "設置",
+  "app.label.orders": "我的訂單",
+  "app.label.start": "開始",
+  "app.label.personaluserdata": "個人用戶數據",
+  "app.label.save": "保存",
+  "app.label.hi": "嗨",
   "app.label.becomePartener": "成為商業夥伴",
-
   "app.label.email": "電子郵件",
   "app.label.password": "密碼",
   "app.label.repeatPassword": "重複密碼",
   "app.label.singOn": "唱歌",
+  "app.label.singOut": "唱出來",
   "app.label.singIn": "唱歌",
   "app.label.singIn2": "只有賬號？唱歌",
-
   "app.label.register": "加入什麼？創建一個賬戶",
   "app.label.forgotPassword": "忘記我的賬號密碼",
-  "app.label.back":"返回",
-  "app.label.recover":"恢復",
-
+  "app.label.back": "返回",
+  "app.label.recover": "恢復",
+  "app.label.userdata": "用戶數據",
+  "app.label.address": "地址",
+  "app.label.docs": "文檔",
+  "app.label.avatar": "頭像",
+  "app.label.firstName": "名字",
+  "app.label.lastName": "姓氏",
+  "app.label.emailAddress": "電子郵件地址",
+  "app.label.phoneNumber": "電話號碼",
+  "app.label.city": "城市",
+  "app.label.province": "省",
   "app.service.express.title": "快遞",
   "app.service.express.description": "城內派送服務適合個人寄件。更快更敏捷",
   "app.service.liteExpress.title": "精簡版快遞",
@@ -51,34 +61,29 @@
   "app.service.cargo.description": "市內專車派送服務適合大件貨件。",
   "app.service.liteCargo.title": "Lite Cargo",
   "app.service.liteCargo.description": "使用不同類型車隊的汽車的城際/地區送貨服務。",
-
   "app.about.title": "發現新體驗！",
   "app.about.description": "通過使用 OmKurir 的商業服務改善您的業務並獲得更多有利可圖的優惠。將您的個人帳戶升級為 OmKurir 的商業帳戶，從僅僅發送貨物中獲得許多好處和愉快的體驗。",
   "app.about.0": "策劃的交付專家交付。不受歡迎的客戶服務。選擇適合您業務的交付解決方案。",
   "app.about.1": "響應式支持您和您的客戶在每一步都會收到文本更新。而且，您始終可以與真人交談。",
   "app.about.2": "保證費率沒有附加費。沒有驚喜。只有一個合理的固定費率。",
-
   "app.footer.aboutUs": "關於 OmKurir",
   "app.aboutus.text.0": "OmKurir 為經過全面審查的交付專業人士提供最新的點對點技術。所有這些都是為了從您的收銀機到客戶房間的可靠策劃交付。我們的專家服務提供零售 企業，無縫的當日交付體驗，增加您的大宗交易並滿足您客戶的高標準。",
   "app.aboutus.text.1": "我們看到，與印度尼西亞的電子商務市場用戶相比，社交商務（社交媒體上的在線商店）的增長非常顯著。即使大多數電子商務賣家都是從一個 社交商務。",
   "app.aboutus.text.2": "目前，社交媒體不再只是一個社交平台，而是變成了一個買賣平台。為了連接買家和賣家，目前可用的送貨服務，除了價格昂貴， 除市場用戶外，也不提供貨到付款功能。",
-
   "app.contactUs.title": "聯繫我們",
   "app.contactUs.description": "有問題或評論？一位 PICKUP 代表正在待命。需要交付什麼東西嗎？",
   "app.contactUs.form": "聯繫方式",
   "app.contactUs.formdescription": "今天就聯繫我們，讓您的客戶在同一天和預定的送貨時間從您的公司到他們家。想要送貨上門取貨嗎？立即註冊",
-
   "app.auth.off.title": "找回忘記的密碼？",
   "app.auth.off.description": "要重置密碼，請輸入您的電子郵件地址。",
-
   "app.auth.in.title": "登錄您的賬戶",
   "app.auth.in.description": "",
-
   "app.auth.on.title": "註冊",
   "app.auth.on.description": "註冊創建新賬戶",
   "app.auth.on.policy": "註冊即表示您接受 OmKurir 用戶協議、隱私政策和 Cookie 政策。",
+  "app.auth.on.complete": "我們快到了",
+  "app.auth.on.completeObs": "用您的其他個人信息填寫下表，這很重要",
   "app.message.sucessRecover": "我們已經向您發送了一封電子郵件",
-
   "app.howItWork.title": "發現新體驗！",
   "app.howItWork.0": "更快到達",
   "app.howItWork.1": "支持 COD & CAC 支付",
@@ -88,12 +93,9 @@
   "app.howItWork.5": "從小件到大件、同城發貨、國內到國際的超完善服務。",
   "app.howItWork.6": "最低迴報。",
   "app.howItWork.7": "全面支持您的業務需求。",
-
   "app.download.description": "社交商務。 誰在社交媒體上銷售這些產品。",
-
   "app.blog.title": "我們的最新更新",
   "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam noumy eirmod tempor invidunt ut labore et dolore。",
-
   "app.subscribe.title": "訂閱我們的時事通訊",
   "app.subscribe.description": "加入成千上萬相信這是一款應用的用戶。"
 }

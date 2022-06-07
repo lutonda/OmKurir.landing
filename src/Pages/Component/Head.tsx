@@ -83,23 +83,24 @@ const Head = ({ auth }: { auth: any }) => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    {auth.isLogedIn ? 
-                      <AuthHead auth={auth}/>
-                    : (
-                      <Link
-                        className="main-btn wow fadeInUp"
-                        data-wow-duration="1.3s"
-                        data-wow-delay="1s"
-                        to="/auth"
-                        style={{
-                          padding: " 0 25px",
-                          height: " 35px",
-                          lineHeight: "35px",
-                        }}
-                      >
-                        Join the family
-                      </Link>
-                    )}
+                    {auth.isLogedIn ?
+                      <AuthHead auth={auth} />
+                      : (
+                        <Link
+                          className="main-btn wow fadeInUp"
+                          data-wow-duration="1.3s"
+                          data-wow-delay="1s"
+                          to="/auth"
+                          style={{
+                            padding: " 0 25px",
+                            height: " 35px",
+                            lineHeight: "35px",
+                          }}
+                        >
+                          <FormattedMessage id="app.label.singIn" /> {" "}/{" "}
+                          <FormattedMessage id="app.label.singOn" />
+                        </Link>
+                      )}
                   </li>
 
                   <li className="nav-item">

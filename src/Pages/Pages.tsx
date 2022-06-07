@@ -17,6 +17,8 @@ import SingIn from './Auth/SignIn/SignIn';
 import SingOn from './Auth/SignOn/SignOn';
 import SingOff from './Auth/SingOff/SingOff';
 import User from './Auth/User/User';
+import UpdateUser from './Auth/User/UpdateData/UpdateUser';
+import OrderData from './Auth/User/OrderData/OrderData';
 
 function Pages() {
   return (
@@ -33,6 +35,9 @@ function Pages() {
 
       
       <Route path="/mykurir" element={<User />} />
+      <Route path="/mykurir/update" element={<UpdateUser />} />
+      <Route path="/mykurir/orders" element={<OrderData />} />
+      
       <Route path="/auth" element={<SingIn />} />
       <Route path="/auth/join" element={<SingOn />} />
       <Route path="/auth/recover" element={<SingOff />} />

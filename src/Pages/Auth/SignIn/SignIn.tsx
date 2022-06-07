@@ -4,8 +4,10 @@ import { Footer, MiniHeader as Header } from "../../Component";
 import SingInForm from "./SingInForm";
 import { connect } from "react-redux";
 import { SingInAction } from "../../../Api/Actions/AuthAction";
+import { useNavigate } from "react-router-dom";
 
 const SingIn = ({singIn}:{singIn:any}) => {
+  const navigate=useNavigate();
   return (
     <>
       <Header title="app.footer.careers" subTitle="app.careers.description" />
@@ -21,7 +23,7 @@ const SingIn = ({singIn}:{singIn:any}) => {
             data-wow-duration="1.3s"
             data-wow-delay="1s"
           >
-            <SingInForm singIn={singIn}/>
+            <SingInForm singIn={singIn} navigate={navigate}/>
           </div>
         </div>
       </div>

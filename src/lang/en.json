@@ -25,19 +25,40 @@
   "app.label.downloadNow": "Download Now",
   "app.label.enterManil": "Enter Email...",
   "app.label.subscribe": "Subscribe",
+  
+  "app.label.settings": "Settings",
+  "app.label.orders": "orders",
+  "app.label.start": "Start",
+  "app.label.personaluserdata": "Personal User data",
+  "app.label.save": "Save",
 
   "app.label.email": "E-mail",
   "app.label.password": "Password",
   "app.label.repeatPassword": "Repeat password",
   "app.label.singOn": "Sing On",
+  "app.label.singOut": "Sing Out",
   "app.label.singIn": "Sing In",
   "app.label.singIn2": "Just have account? Sing In",
+
+  "app.label.hi": "Hi",
 
   "app.label.becomePartener": "Become out business Partners",
 
   "app.label.register": "What to join? create an Account",
   "app.label.forgotPassword": "Forgot my acconut password",
   "app.label.back":"Return back",
+  "app.auth.out.title": "Sign Out",
+
+  "app.label.userdata": "User data",
+  "app.label.address": "Address",
+  "app.label.docs": "Documents",
+  "app.label.avatar": "Profile photo",
+  "app.label.firstName": "First Name",
+  "app.label.lastName": "Last Name",
+  "app.label.emailAddress": "Email Address",
+  "app.label.phoneNumber": "Phone Number",
+  "app.label.city": "City",
+  "app.label.province": "Province",
   
   "app.service.express.title": "Express",
   "app.service.express.description": "Delivery service within the city is suitable for personal shipments. Faster and agile",
@@ -77,6 +98,9 @@
   "app.auth.on.title": "Register",
   "app.auth.on.description": "Sign up to create a new account",
   "app.auth.on.policy": "By registering, you accept the OmKurir User Agreement, Privacy Policy and Cookie Policy.",
+
+  "app.auth.on.complete": "We are almost there",
+  "app.auth.on.completeObs": "Complete the form below with your additional personal information, which is important",
 
   "app.message.sucessRecover": "We have sent an Email to you,",
   "app.howItWork.title": "Discover New Experience!",

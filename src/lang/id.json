@@ -8,38 +8,47 @@
   "app.menu.about": "Tentang",
   "app.menu.discover": "Menemukan",
   "app.menu.blog": "Blog",
-
   "app.header.title": "{appName} adalah layanan logistik untuk bisnis Anda",
   "app.header.description": "Kami memberikan kemudahan bagi pengguna untuk mengirim barang menggunakan metode pembayaran cash-on-delivery (COD) & cash-and-carry (CAC) tanpa marketplace",
-
   "app.order.title": "Hitung biaya Pengiriman Anda",
   "app.order.description": "Jasa pengiriman dalam kota cocok untuk personalship. Lebih cepat dan gesit",
   "app.order.check": "Cek ongkos kirim",
-
   "app.track.title": "Melacak pengiriman",
   "app.track.description": "Layanan pengiriman dalam kota cocok untuk pengiriman pribadi. Lebih cepat dan gesit",
-
   "app.label.sid_code": "SID KODE:",
   "app.label.discoverMore": "Temukan lebih banyak",
   "app.label.download": "Unduh",
   "app.label.downloadNow": "Unduh sekarang",
   "app.label.enterManil": "Masukkan Email...",
   "app.label.subscribe": "Berlangganan",
-
+  "app.label.settings": "Setelan",
+  "app.label.orders": "Pesananku",
+  "app.label.start": "Mulai",
+  "app.label.personaluserdata": "Data Pengguna Pribadi",
+  "app.label.save": "Simpan",
   "app.label.email": "Email",
-  "app.label.password": "Password",
+  "app.label.password": "Kata sandi",
   "app.label.repeatPassword": "Ulangi kata sandi",
   "app.label.singOn": "Nyanyikan",
+  "app.label.singOut": "Nyanyikan",
   "app.label.singIn": "Nyanyikan",
   "app.label.singIn2": "Hanya punya akun? Nyanyikan",
-
+  "app.label.hi": "Hai",
   "app.label.becomePartener": "Menjadi Mitra bisnis",
-
   "app.label.register": "Apa yang harus bergabung? buat Akun",
   "app.label.forgotPassword": "Lupa kata sandi akun saya",
   "app.label.back": "Kembali",
-  "app.label.recover":"Pulihkan",
-
+  "app.label.recover": "Pulihkan",
+  "app.label.userdata": "Data pengguna",
+  "app.label.address": "Alamat",
+  "app.label.docs": "Dokumen",
+  "app.label.avatar": "Foto profil",
+  "app.label.firstName": "Nama Depan",
+  "app.label.lastName": "Nama Belakang",
+  "app.label.emailAddress": "Alamat Email",
+  "app.label.phoneNumber": "Nomor Telepon",
+  "app.label.city": "Kota",
+  "app.label.province": "Provinsi",
   "app.service.express.title": "Ekspres",
   "app.service.express.description": "Layanan pengiriman dalam kota cocok untuk pengiriman pribadi. Lebih cepat dan gesit",
   "app.service.liteExpress.title": "Lite express",
@@ -52,34 +61,29 @@
   "app.service.cargo.description": "Layanan pengiriman dalam kota menggunakan mobil cocok untuk pengiriman besar.",
   "app.service.liteCargo.title": "Lite Cargo",
   "app.service.liteCargo.description": "jasa pengiriman antar kota/kabupaten menggunakan mobil dengan berbagai jenis armada.",
-
   "app.about.title": "Temukan Pengalaman Baru!",
   "app.about.description": "Tingkatkan bisnis Anda dan dapatkan penawaran yang jauh lebih menguntungkan dengan menggunakan layanan bisnis OmKurir. Tingkatkan akun pribadi Anda ke akun bisnis OmKurir untuk mendapatkan banyak manfaat dan pengalaman menyenangkan hanya dengan mengirim barang.",
   "app.about.0": "Pengiriman Pakar Pengiriman Terkurasi. Layanan pelanggan yang luar biasa. Pilih solusi pengiriman yang tepat untuk bisnis Anda.",
   "app.about.1": "Dukungan Responsif Anda dan pelanggan Anda mendapatkan pembaruan teks di setiap langkah. Dan, Anda selalu dapat berbicara dengan orang sungguhan.",
   "app.about.2": "Tarif Jaminan Tidak ada biaya tambahan. Tidak ada kejutan. Hanya satu tarif tetap yang wajar.",
-
   "app.contactUs.title": "Hubungi Kami",
   "app.contactUs.description": "Ada pertanyaan atau komentar? Seorang perwakilan PICKUP siap membantu. Butuh sesuatu yang diantar?",
   "app.contactUs.form": "Formulir kontak",
   "app.contactUs.formdescription": "Hubungi kami hari ini untuk mendapatkan pembelian pelanggan Anda dari bisnis Anda ke rumah mereka dengan hari yang sama dan pengiriman terjadwal. Ingin mengantarkan untuk PICKUP? Daftar Sekarang",
-
   "app.auth.off.title": "Pulihkan Kata Sandi yang Terlupakan?",
   "app.auth.off.description": "Untuk mengatur ulang kata sandi Anda, masukkan alamat email Anda.",
-
   "app.auth.in.title": "Masuk ke akun Anda",
   "app.auth.in.description": "",
-
   "app.auth.on.title": "Daftar",
   "app.auth.on.description": "Daftar untuk membuat akun baru",
   "app.auth.on.policy": "Dengan mendaftar, Anda menerima Perjanjian Pengguna OmKurir, Kebijakan Privasi, dan Kebijakan Cookie.",
+  "app.auth.on.complete": "Kita hampir sampai",
+   "app.auth.on.completeObs": "Lengkapi formulir di bawah ini dengan informasi pribadi tambahan Anda, yang penting",
   "app.message.sucessRecover": "Kami telah mengirimkan Email kepada Anda,",
-
   "app.footer.aboutUs": "Tentang OmKurir",
   "app.aboutus.text.0": "OmKurir menawarkan talenta Pengiriman Pro yang sepenuhnya diperiksa dengan teknologi point-to-point terbaru. Semua untuk pengiriman terkurasi yang andal dari register Anda ke ruang pelanggan. Layanan ahli kami menawarkan ritel bisnis, pengalaman pengiriman hari yang sama tanpa batas yang meningkatkan transaksi tiket besar Anda dan memenuhi standar tinggi pelanggan Anda.",
   "app.aboutus.text.1": "Kami melihat bahwa pertumbuhan social commerce (toko online di media sosial) sangat signifikan dibandingkan dengan pengguna e-commerce marketplace di Indonesia. Bahkan sebagian besar penjual e commerce tersebut dimulai dengan perdagangan sosial.",
   "app.aboutus.text.2": "Saat ini, media sosial tidak lagi hanya sebagai platform bersosialisasi, tetapi telah berubah menjadi platform jual beli. Untuk menghubungkan pembeli dan penjual, layanan pengiriman yang tersedia saat ini selain mahal, juga tidak menyediakan fitur cash on delivery kecuali untuk pengguna marketplace.",
-
   "app.howItWork.title": "Temukan Pengalaman Baru!",
   "app.howItWork.0": "Lebih cepat tiba",
   "app.howItWork.1": "Mendukung pembayaran COD & CAC",
@@ -89,12 +93,9 @@
   "app.howItWork.5": "Layanan super lengkap mulai dari pengiriman kecil & besar, pengiriman kota, domestik hingga internasional.",
   "app.howItWork.6": "Pengembalian minimal.",
   "app.howItWork.7": "Mendukung sepenuhnya kebutuhan bisnis Anda.",
-
   "app.download.description": "perdagangan sosial. yang menjual produk tersebut di media sosial.",
-
   "app.blog.title": "Pembaruan terbaru kami",
   "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.",
-
   "app.subscribe.title": "Berlangganan buletin kami",
   "app.subscribe.description": "Bergabunglah dengan ribuan pengguna yang percaya bahwa ini adalah satu-satunya aplikasi."
 }

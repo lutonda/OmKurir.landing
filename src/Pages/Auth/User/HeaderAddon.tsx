@@ -1,10 +1,15 @@
 import { Button } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { SingOutAction } from "../../../Api/Actions/AuthAction";
 
-const HeaderAddon = ({ auth, singOut }: { auth: any; singOut: any }) => {
+const HeaderAddon = (props: any) => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const { auth, singOut, setUpdate } = props
+
+  const menuButtonClassName = (currentPath: string) => (pathname == currentPath ? 'main-btn' : 'btn btn-light') + ' wow-fadeInUp';
   return (
     <div className="addon col-md-12" style={{ padding: 15, marginTop: 100 }}>
       <div className="container">
@@ -23,25 +28,29 @@ const HeaderAddon = ({ auth, singOut }: { auth: any; singOut: any }) => {
           </div>
           <div className="col-md-10" style={{ margin: "3% 0" }}>
             <div className="row">
-              <span style={{ color: "#FFF" }}>Hi! {auth.user.email} | </span>
-              <span onClick={()=>singOut({})} style={{ color: "#FFF" }}>
+              <span style={{ color: "#FFF" }}><FormattedMessage id="app.label.hi"/>! {auth.user.firstName} {auth.user.lastName} | </span>
+              <Button onClick={() => singOut({ navigate })} className={'btn btn-link'} style={{
+                color: "#FFF", background: 'none',
+                border: 'none',
+                padding: '1px 5px'
+              }}>
                 {" "}
-                Sign out
-              </span>
+                <FormattedMessage id="app.label.singOut"/>
+              </Button>
             </div>
             <div className="row">
-              <Link to="/" className="btn btn-light">
-                <i className="lni lni-tab"></i>
-                <FormattedMessage id={"app.label.singOn"} />
+              <Link to="/mykurir" className={menuButtonClassName('/mykurir')}>
+                <i className="lni lni-tab"></i>{" "}
+                <FormattedMessage id={"app.label.start"} />
               </Link>
-              <Link to="/" className="main-btn wow fadeInUp">
+              <Link to="/mykurir/orders" className={menuButtonClassName('/mykurir/orders')}>
                 <i className="lni lni-list"></i>{" "}
-                <FormattedMessage id={"app.label.singOn"} />
+                <FormattedMessage id={"app.label.orders"} />
               </Link>
 
-              <Link to="/" className="btn btn-light">
-                <i className="lni lni-control-panel"></i>
-                <FormattedMessage id={"app.label.singOn"} />
+              <Link to="/mykurir/update" className={menuButtonClassName('/mykurir/update')}>
+                <i className="lni lni-control-panel"></i>{" "}
+                <FormattedMessage id={"app.label.settings"} />
               </Link>
             </div>
           </div>
@@ -51,18 +60,4 @@ const HeaderAddon = ({ auth, singOut }: { auth: any; singOut: any }) => {
   );
 };
 
-const mapStateToProps = (state: any) => {
-  return { auth: state };
-};
-
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    singIn: (userState: any, props: any) => {
-      //dispatch(SingInAction(userState, props));
-    },
-    singOut: (userState: any) => {
-      dispatch(SingOutAction(userState));
-    },
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderAddon);
+export default HeaderAddon;

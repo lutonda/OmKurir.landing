@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import GoogleAuth from "./GoogleAuth";
 
-function SingInForm({ singIn }: { singIn: any }) {
+function SingInForm({ singIn, navigate }: { singIn: any, navigate: any }) {
   return (
     <div className="form-wrapper-content">
       <div className="content">
@@ -13,7 +13,7 @@ function SingInForm({ singIn }: { singIn: any }) {
             <h2>
               <FormattedMessage id={"app.auth.in.title"} />
             </h2>
-            <FormattedMessage id={"app.auth.in.description"} />
+
             <br />
             <br />
             <br />
@@ -22,7 +22,8 @@ function SingInForm({ singIn }: { singIn: any }) {
           <div className="subtitle"></div>
         </div>
         <div style={{ textAlign: "left" }}>
-          <SimpleForm singIn={singIn} />
+          <SimpleForm singIn={singIn} navigate={navigate} />
+
         </div>
       </div>
     </div>
@@ -37,45 +38,56 @@ function SimpleForm(props: any) {
   };
 
   const [state, setState] = useState(initialState);
+  const [validated, setValidated] = useState(false);
   const handleChange = (event: any) => {
     const obj: any = { [event.target.name]: event.target.value };
     setState({ ...state, ...obj });
   };
   const { email, password } = state;
+  const handleSubmit = (e: any) => {
 
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+      setValidated(false);
+    } else {
+      setValidated(true);
+      singIn(state, props);
+    }
+
+    e.preventDefault();
+  }
   return (
     <Container>
-      <Form
-        onSubmit={(e: any) => {
-          e.preventDefault();
-          singIn(state, props);
-        }}
-      >
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group controlId="form.Email">
           <Form.Label>
             <FormattedMessage id={"app.label.email"} />
           </Form.Label>
           <Form.Control
             type="email"
-            placeholder="name@example.com"
             defaultValue={email}
             name="email"
             required
             onChange={handleChange}
           />
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">Enter your valid E-mail.</Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="form.password">
           <Form.Label>
             <FormattedMessage id={"app.label.password"} />
           </Form.Label>
           <Form.Control
-            type="password"
-            placeholder="Enter your password"
+            type="password" min={6} max={24}
             defaultValue={password}
             name="password"
             required
             onChange={handleChange}
           />
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">Please type your Password.</Form.Control.Feedback>
         </Form.Group>
         <div className="text-right">
           <Link className="wow fadeInUp pull-right" to="/auth/recover">
@@ -83,7 +95,6 @@ function SimpleForm(props: any) {
           </Link>
         </div>
         <p>
-          <hr />
         </p>
         <Button
           type={"submit"}
@@ -92,7 +103,9 @@ function SimpleForm(props: any) {
         >
           <FormattedMessage id={"app.label.singIn"} />
         </Button>{" "}
+        {/* 
         <GoogleAuth />
+        */}
         <br />
         <br />
         <Link className="wow fadeInUp" to="/auth/join">

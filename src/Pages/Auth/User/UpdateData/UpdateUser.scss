@@ -1,0 +1,17 @@
+#updateUser {
+    ul.list-group {
+        .btn:not(.active) {
+            color:#000
+        }
+        .btn.active {
+            background-color: #4d21a7;
+        }
+        .btn{
+            text-align: left;
+        }
+        .btn:hover{
+            background-color: #4d21a7;
+            color: #FFF;
+        }
+    }
+}
