@@ -3,11 +3,12 @@ import { Form, Row, Button, Col, Container } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 import { CompleteSingOnAction } from "../../../Api/Actions/AuthAction";
 import { UserFindAction } from "../../../Api/Actions/UserAction";
 import "./SignOnForm.scss";
 const CompleteSingOnForm = ({ user, CompletesingOn, findUser }: { user: any, CompletesingOn: any, findUser: any }) => {
-    return (
+  return (
     <div
       id="singOnForm"
       className="form-wrapper-box push-into-header  wow fadeInUp"
@@ -20,7 +21,7 @@ const CompleteSingOnForm = ({ user, CompletesingOn, findUser }: { user: any, Com
           <div className="col-md-12 title-wrapper">
             <div className="title" style={{ textAlign: "left" }}>
               <hr />
-              
+
               <h2><FormattedMessage id="app.auth.on.complete" /></h2>
               <FormattedMessage id="app.auth.on.completeObs" />
             </div>
@@ -45,6 +46,7 @@ const MultiStepForm = ({ user, completesingOn }: { user: any, completesingOn: an
       address: [],
     }, ...user.user
   };
+  const { addToast } = useToasts();
   const [state, setState] = useState(initialState)
 
   const navigate = useNavigate();
@@ -73,7 +75,7 @@ const MultiStepForm = ({ user, completesingOn }: { user: any, completesingOn: an
     setState({ ...state, ...{ address } });
 
   const submitChanges = () => {
-    completesingOn(state, { navigate })
+    completesingOn(state, { navigate, addToast })
   }
   const {
     total,
@@ -137,19 +139,54 @@ const MultiStepForm = ({ user, completesingOn }: { user: any, completesingOn: an
 }
 
 const UserDetails = (form: any) => {
-  const back = (e: any) => {
-    e.preventDefault();
-    form.prevStep();
-  };
+
+  const [validated, setValidated] = useState(false);
+  const [formValidation, setFormValidation] = useState<Anonymous>();
 
   const saveAndContinue = (e: any) => {
+    debugger
+    setValidated(false);
+    const f = e.currentTarget;
+    if (f.checkValidity() === true) {
+      setValidated(true);
+      form.nextStep();
+    } else {
+      setValidated(false);
+    }
+
     e.preventDefault();
-    form.nextStep();
+    e.stopPropagation();
+    // return false
+
   };
 
+  const valid = (t: any): boolean => {
+    switch (t.type) {
+      case 'text':
+        return t.value.length > 3;
+        break;
+      case 'telephone':
+        return t.value.length > 8 && t.value.length < 13
+        break;
+      default:
+        return true;
+        break;
+    }
+  }
+  interface Anonymous {
+    [key: string]: any
+  }
+
+  const handleChange = (e: any) => {
+    let i: Anonymous = {}
+    i[e.target.name] = valid(e.target)
+    debugger
+    setFormValidation({ ...formValidation, ...i });
+    form.handleChange(e)
+  }
   return (
     <Container>
-      <Form>
+      <Form noValidate validated={validated} onSubmit={saveAndContinue}>
         <Row>
           <Form.Group as={Col} controlId="formFirstName">
             <Form.Label className="label">First Name</Form.Label>
@@ -158,11 +195,13 @@ const UserDetails = (form: any) => {
               defaultValue={form.inputValues.firstName}
               name="firstName"
               required
-              onChange={form.handleChange}
+              onChange={handleChange}
             />
+            {formValidation?.firstName ? <small className="invalid-feedback error" style={{display: block}}>this field is required</small> : <></>}
+            <Form.Control.Feedback type="invalid">Enter your valid E-mail.</Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formLastName">
+          <Form.Group as={Col} controlId="form.LastName">
             <Form.Label className="label">Last Name</Form.Label>
             <Form.Control
               type="text"
@@ -174,7 +213,7 @@ const UserDetails = (form: any) => {
           </Form.Group>
         </Row>
 
-        <Form.Group controlId="formEmail">
+        <Form.Group controlId="form.Email">
           <Form.Label className="label">Email Address</Form.Label>
           <Form.Control
             type="email"
@@ -182,16 +221,17 @@ const UserDetails = (form: any) => {
             name="email"
             readOnly
             required
-            onChange={form.handleChange}
+          // onChange={form.handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formphoneNumber">
+        <Form.Group controlId="form.PhoneNumber">
           <Form.Label className="label">Phone Number</Form.Label>
           <Form.Control
             type="text"
             defaultValue={form.inputValues.phoneNumber}
             name="phoneNumber"
             required
+            isValid={false}
             onChange={form.handleChange}
           />
         </Form.Group>
@@ -200,7 +240,8 @@ const UserDetails = (form: any) => {
         </p>
         <Button
           variant="primary"
-          onClick={saveAndContinue}
+          type="submit"
+          /*onClick={saveAndContinue}*/
           className="main-btn wow fadeInUp"
         >
           Next <i className="lni lni-chevron-right"></i>

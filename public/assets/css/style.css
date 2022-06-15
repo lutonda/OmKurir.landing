@@ -1642,3 +1642,11 @@ p {
   background-color: #3698EE;
 }
 /*# sourceMappingURL=style.css.map */
+
+.card {
+  
+  background-color: #f7f7f7;
+  background-clip: border-box;
+  border:none;
+  
+}

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { ToastProvider } from 'react-toast-notifications'
 import * as serviceWorker from "./serviceWorker";
 import { IntlProvider } from "react-intl";
 import Chinese from "./lang/cn.json";
@@ -15,7 +15,7 @@ import store from "./Api/reducers/store";
 
 import axios from "axios";
 
-axios.defaults.baseURL = "https://api.omkurir.hiperbite.ao/api/v2/"
+axios.defaults.baseURL = "https://4000-lutonda-omkurirserver-j99bhg02iia.ws-eu47.gitpod.io/api/v2/"
 
 let locale = navigator.language;
 
@@ -40,9 +40,11 @@ root.render(
   <React.StrictMode>
     <IntlProvider locale={locale} messages={English}>
       <Provider store={store}>
-        <Wrapper>
-          <App />
-        </Wrapper>
+        <ToastProvider autoDismissTimeout={5000} transitionDuration={500}>
+          <Wrapper>
+            <App />
+          </Wrapper>
+        </ToastProvider>
       </Provider>
     </IntlProvider>
   </React.StrictMode>

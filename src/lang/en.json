@@ -8,30 +8,24 @@
   "app.menu.about": "About",
   "app.menu.discover": "Discover",
   "app.menu.blog": "Blog",
-
   "app.header.title": "OmKurir is a logistics service for your business",
   "app.header.description": "We make easy for users to send goods using the cash-on-delivery (COD) & cash-and-carry (CAC) pay method without a marketplace",
-
   "app.order.title": "Calculate your Shipping costs",
   "app.order.description": "Delivery service within the city is suitable for personalshipments. Faster and agile",
   "app.order.check": "Check Postage",
-
   "app.track.title": "Track Delivery",
   "app.track.description": "Delivery service within the city is suitable for personal shipments. Faster and agile",
-
   "app.label.sid_code": "SID CODE:",
   "app.label.discoverMore": "Discover more",
   "app.label.download": "Download the App",
   "app.label.downloadNow": "Download Now",
   "app.label.enterManil": "Enter Email...",
   "app.label.subscribe": "Subscribe",
-  
   "app.label.settings": "Settings",
   "app.label.orders": "orders",
   "app.label.start": "Start",
   "app.label.personaluserdata": "Personal User data",
   "app.label.save": "Save",
-
   "app.label.email": "E-mail",
   "app.label.password": "Password",
   "app.label.repeatPassword": "Repeat password",
@@ -39,16 +33,12 @@
   "app.label.singOut": "Sing Out",
   "app.label.singIn": "Sing In",
   "app.label.singIn2": "Just have account? Sing In",
-
   "app.label.hi": "Hi",
-
   "app.label.becomePartener": "Become out business Partners",
-
   "app.label.register": "What to join? create an Account",
   "app.label.forgotPassword": "Forgot my acconut password",
-  "app.label.back":"Return back",
+  "app.label.back": "Return back",
   "app.auth.out.title": "Sign Out",
-
   "app.label.userdata": "User data",
   "app.label.address": "Address",
   "app.label.docs": "Documents",
@@ -59,7 +49,6 @@
   "app.label.phoneNumber": "Phone Number",
   "app.label.city": "City",
   "app.label.province": "Province",
-  
   "app.service.express.title": "Express",
   "app.service.express.description": "Delivery service within the city is suitable for personal shipments. Faster and agile",
   "app.service.liteExpress.title": "Lite express",
@@ -72,36 +61,28 @@
   "app.service.cargo.description": "In-city delivery service using a car is suitable for large shipments.",
   "app.service.liteCargo.title": "Lite Cargo",
   "app.service.liteCargo.description": "nter-city/district delivery service using cars with various types of fleets.",
-
   "app.about.title": "Discover New Experience!",
   "app.about.description": "Improve your business and get much more profitable offers by using OmKurir's business services. Upgrade your personal account to OmKurir's business account to get many benefits and a pleasant experience from just sending goods.",
   "app.about.0": "Curated Delivery Expert delivery. Off-the-charts customer service. Choose the delivery solution that’s right for your business.",
   "app.about.1": "Responsive Support You and your customers get text updates every step of the way. And, you can always talk to a real person.",
   "app.about.2": "Guarantee Rates No upcharges. No surprises. Just one reasonable fixed rate.",
-
   "app.footer.aboutUs": "About OmKurir",
   "app.aboutus.text.0": "OmKurir offers the talents of fully-vetted Delivery Pros with the latest in point-to-point technology. All for reliable curated deliveries from your register to the customer’s room. Our expert services offers retail businesses, a seamless same-day delivery experience that increases your big-ticket transactions and satisfies your customers’ high standards.",
   "app.aboutus.text.1": "We are see that the growth of social commerce (online shops on social media) is very significant compared to e-commerce marketplace users in Indonesia. Even mostly those e commerce sellers is start with a social commerce.",
   "app.aboutus.text.2": "Currently, social media is no longer just a socializing platform, but has turned into a buying and selling platform. To connect buyers and sellers, the currently available delivery service, apart from being expensive, also does not provide a cash on delivery feature except for marketplace users.",
-
   "app.contactUs.title": "Contact Us",
   "app.contactUs.description": "Got a question or comment? A PICKUP rep is standing by. Need something delivered?",
   "app.contactUs.form": "Contact form",
   "app.contactUs.formdescription": "Contact us today to get your customers’ purchases from your business to their home with same day and scheduled delivery. Want to deliver for PICKUP? Sign Up Now",
-
   "app.auth.off.title": "Recover Forgotten Password?",
   "app.auth.off.description": "To reset your password, enter your email address.",
-
   "app.auth.in.title": "Sign in into your account",
   "app.auth.in.description": "",
-
   "app.auth.on.title": "Register",
   "app.auth.on.description": "Sign up to create a new account",
   "app.auth.on.policy": "By registering, you accept the OmKurir User Agreement, Privacy Policy and Cookie Policy.",
-
   "app.auth.on.complete": "We are almost there",
   "app.auth.on.completeObs": "Complete the form below with your additional personal information, which is important",
-
   "app.message.sucessRecover": "We have sent an Email to you,",
   "app.howItWork.title": "Discover New Experience!",
   "app.howItWork.0": "Faster to arrive",
@@ -112,12 +93,16 @@
   "app.howItWork.5": "Super complete services ranging from small & large shipments, city shipments, domestic to international.",
   "app.howItWork.6": "Minimal returns.",
   "app.howItWork.7": "Fully support your business needs.",
-
   "app.download.description": "Social commerce. who selling those product on social media.",
-
   "app.blog.title": "Our newest updates",
   "app.blog.description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.",
-
   "app.subscribe.title": "Subscribe our newsletter",
-  "app.subscribe.description": "Join thousands of users who believe this is the one app."
+  "app.subscribe.description": "Join thousands of users who believe this is the one app.",
+  "app.messages.register_success": "Congrats: Your have been reistered Successfully",
+  "app.messages.singon_update_success": "Congrats: Your data has been save Successfully",
+  "app.messages.register_fail": "Registration error: ...",
+  "app.messages.singin_success": "Congrats: Authenticated Successfully",
+  "app.messages.singin_fail": "Error: ...",
+  "app.messages.singout_out": "We are heare waiting for you",
+  "app.messages.auth_does_not_match": "Current Username and password does not match"
 }

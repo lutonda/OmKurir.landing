@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import { Form, Row, Button, Col, Container } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 
 import "./SignOnForm.scss";
 function SingOnForm({ register }: { register: any }) {
@@ -45,6 +46,7 @@ function SimpleForm(props: any) {
     repeatPassword: "",
   };
 
+  const { addToast } = useToasts()
   const [state, setState] = useState(initialState);
   const [validated, setValidated] = useState(false);
   const handleChange = (event: any) => {
@@ -60,20 +62,19 @@ function SimpleForm(props: any) {
   };
 
   const handleSubmit = (e: any) => {
+
     debugger
     const form = e.currentTarget;
-    if (form.checkValidity() === false) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      setValidated(false);
-    } else {
+    if (form.checkValidity() === true) {
       setValidated(true);
-      register(state, props)
-
+      register(state, { ...props, addToast })
+    } else {
+      setValidated(false);
     }
 
     e.preventDefault();
+    e.stopPropagation();
+    return false
   }
   return (
     <Container>
@@ -114,16 +115,9 @@ function SimpleForm(props: any) {
               role="alert"
               style={{ width: "100%", textAlign: "left" }}
             >
-              {type === 0 ? (
-                <>
-                  <i className="lni lni-user"></i> Creating a Personal account
-                </>
-              ) : (
-                <>
-                  <i className="lni lni-apartment"></i> Creating a Business
-                  account
-                </>
-              )}
+              {[<><i className="lni lni-user"></i> Creating a Personal account</>,
+              <><i className="lni lni-apartment"></i> Creating a Business account</>]
+              [type]}
             </div>
             <Form.Group controlId="form.Email">
               <Form.Label>
@@ -136,6 +130,7 @@ function SimpleForm(props: any) {
                 required
                 onChange={handleChange}
               />
+              {}
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">Enter your valid E-mail.</Form.Control.Feedback>
             </Form.Group>

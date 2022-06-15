@@ -4,6 +4,7 @@ import Subscribe from "./Subscribe";
 import Footer from "./Footer";
 import Preloader from "./Preloader";
 import Modal from './Modal';
+import ProgressBar from './ProgressBar';
 
 export {
   MainHeader,
@@ -15,4 +16,5 @@ export {
   Footer,
   Preloader,
   Modal,
+  ProgressBar
 };

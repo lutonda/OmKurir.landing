@@ -2,13 +2,14 @@ import { Button } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 import { SingOutAction } from "../../../Api/Actions/AuthAction";
 
 const HeaderAddon = (props: any) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { auth, singOut, setUpdate } = props
-
+  const { addToast } = useToasts();
   const menuButtonClassName = (currentPath: string) => (pathname == currentPath ? 'main-btn' : 'btn btn-light') + ' wow-fadeInUp';
   return (
     <div className="addon col-md-12" style={{ padding: 15, marginTop: 100 }}>
@@ -28,14 +29,14 @@ const HeaderAddon = (props: any) => {
           </div>
           <div className="col-md-10" style={{ margin: "3% 0" }}>
             <div className="row">
-              <span style={{ color: "#FFF" }}><FormattedMessage id="app.label.hi"/>! {auth.user.firstName} {auth.user.lastName} | </span>
-              <Button onClick={() => singOut({ navigate })} className={'btn btn-link'} style={{
+              <span style={{ color: "#FFF" }}><FormattedMessage id="app.label.hi" />! {auth.user.firstName} {auth.user.lastName} | </span>
+              <Button onClick={() => singOut({ navigate, addToast })} className={'btn btn-link'} style={{
                 color: "#FFF", background: 'none',
                 border: 'none',
                 padding: '1px 5px'
               }}>
                 {" "}
-                <FormattedMessage id="app.label.singOut"/>
+                <FormattedMessage id="app.label.singOut" />
               </Button>
             </div>
             <div className="row">
